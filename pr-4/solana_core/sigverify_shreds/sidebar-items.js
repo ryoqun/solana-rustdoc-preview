@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEDUPER_FALSE_POSITIVE_RATE","DEDUPER_NUM_BITS","DEDUPER_RESET_CYCLE"],"enum":["Error"],"fn":["count_discards","get_slot_leaders","run_shred_sigverify","spawn_shred_sigverify","verify_packets"],"struct":["ShredSigVerifyStats"]};

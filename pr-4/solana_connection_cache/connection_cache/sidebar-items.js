@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEFAULT_CONNECTION_POOL_SIZE","MAX_CONNECTIONS"],"enum":["ClientError","ConnectionPoolError"],"struct":["ConnectionCache","CreateConnectionResult","GetConnectionResult"],"trait":["BaseClientConnection","ConnectionManager","ConnectionPool","NewConnectionConfig"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["main","spawn","test_solana","test_solana_package"],"struct":["Config"]};

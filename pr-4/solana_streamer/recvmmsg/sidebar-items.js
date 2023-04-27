@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["NUM_RCVMMSGS"],"fn":["cast_socket_addr","recv_mmsg"]};

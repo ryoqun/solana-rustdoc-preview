@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","VARIANTS"],"enum":["SavedTowerVersions","__Field"],"struct":["EtcdTlsConfig","EtcdTowerStorage","FileTowerStorage","NullTowerStorage","SavedTower","__FieldVisitor","__Visitor"],"trait":["TowerStorage"]};

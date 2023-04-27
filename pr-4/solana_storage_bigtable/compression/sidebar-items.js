@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["VARIANTS"],"enum":["CompressionMethod","__Field"],"fn":["compress","compress_best","decompress","decompress_reader"],"struct":["__FieldVisitor","__Visitor"]};

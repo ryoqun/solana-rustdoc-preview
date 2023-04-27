@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"solana_program_runtime":[["impl&lt;'a&gt; ContextObject for <a class=\"struct\" href=\"solana_program_runtime/invoke_context/struct.InvokeContext.html\" title=\"struct solana_program_runtime::invoke_context::InvokeContext\">InvokeContext</a>&lt;'a&gt;"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

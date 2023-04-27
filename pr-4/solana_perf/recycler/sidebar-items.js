@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["RECYCLER_SHRINK_SIZE","RECYCLER_SHRINK_WINDOW","RECYCLER_SHRINK_WINDOW_HALF","RECYCLER_SHRINK_WINDOW_SUB_ONE","SIZE_FACTOR_AFTER_SHRINK"],"fn":["__stability","__static_ref_initialize","enable_recycler_warming","warm_recyclers"],"struct":["Recycler","RecyclerStats","RecyclerX","WARM_RECYCLERS"],"trait":["Reset"]};

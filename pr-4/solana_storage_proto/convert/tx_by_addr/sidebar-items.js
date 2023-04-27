@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["STRUCT_NAME"],"enum":["InstructionErrorType","TransactionErrorType"],"fn":["ScalarWrapper"],"struct":["CustomError","InstructionError","Memo","ScalarWrapper","TransactionByAddr","TransactionByAddrInfo","TransactionDetails","TransactionError","UnixTimestamp"]};

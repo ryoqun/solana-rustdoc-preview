@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Loads a Signer from one of several possible sources."><title>signer_from_path in solana_clap_utils::keypair - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-ba5701c5741a7b69.css" id="mainThemeStyle"><div id="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="solana_clap_utils" data-themes="" data-resource-suffix="" data-rustdoc-version="1.71.0-nightly (1c42cb4ef 2023-04-26)" data-search-js="search-618e954b235f6acc.js" data-settings-js="settings-de11bff964e9d4e5.js" data-settings-css="settings-6f6ffb5395b17c6e.css" data-theme-light-css="light-0f8c037637f9eb3e.css" data-theme-dark-css="dark-1097f8e92a01e3cf.css" data-theme-ayu-css="ayu-614652228113ac93.css" ></div><script src="../../static.files/storage-62ce34ea385b278a.js"></script><script defer src="sidebar-items.js"></script><script defer src="../../static.files/main-f0540c1d82cde29b.js"></script><noscript><link rel="stylesheet" media="(prefers-color-scheme:light)" href="../../static.files/light-0f8c037637f9eb3e.css"><link rel="stylesheet" media="(prefers-color-scheme:dark)" href="../../static.files/dark-1097f8e92a01e3cf.css"><link rel="stylesheet" href="../../static.files/noscript-13285aec31fa243e.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc fn"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../../solana_clap_utils/index.html"><img class="rust-logo" src="../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2></h2></nav><nav class="sidebar"><a class="logo-container" href="../../solana_clap_utils/index.html"><img class="rust-logo" src="../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><div class="sidebar-elems"><h2><a href="index.html">In solana_clap_utils::keypair</a></h2></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Function <a href="../index.html">solana_clap_utils</a>::<wbr><a href="index.html">keypair</a>::<wbr><a class="fn" href="#">signer_from_path</a><button id="copy-path" title="Copy item path to clipboard"><img src="../../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="srclink" href="../../src/solana_clap_utils/keypair.rs.html#685-693">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><pre class="rust item-decl"><code>pub fn signer_from_path(
+    matches: &amp;<a class="struct" href="https://docs.rs/clap/2.33.3/clap/args/arg_matches/struct.ArgMatches.html" title="struct clap::args::arg_matches::ArgMatches">ArgMatches</a>&lt;'_&gt;,
+    path: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>,
+    keypair_name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>,
+    wallet_manager: &amp;mut <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html" title="struct alloc::sync::Arc">Arc</a>&lt;<a class="struct" href="../../solana_remote_wallet/remote_wallet/struct.RemoteWalletManager.html" title="struct solana_remote_wallet::remote_wallet::RemoteWalletManager">RemoteWalletManager</a>&gt;&gt;
+) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;dyn <a class="trait" href="../../solana_sdk/signer/trait.Signer.html" title="trait solana_sdk::signer::Signer">Signer</a>&gt;, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;dyn <a class="trait" href="https://doc.rust-lang.org/nightly/core/error/trait.Error.html" title="trait core::error::Error">Error</a>&gt;&gt;</code></pre><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Loads a <a href="../../solana_sdk/signer/trait.Signer.html" title="trait solana_sdk::signer::Signer">Signer</a> from one of several possible sources.</p>
+<p>The <code>path</code> is not strictly a file system path, but is interpreted as various
+types of <em>signing source</em>, depending on its format, one of which is a path
+to a keypair file. Some sources may require user interaction in the course
+of calling this function.</p>
+<p>The result of this function is a boxed object of the <a href="../../solana_sdk/signer/trait.Signer.html" title="trait solana_sdk::signer::Signer">Signer</a> trait. To load
+a concrete <a href="../../solana_sdk/signer/keypair/struct.Keypair.html" title="struct solana_sdk::signer::keypair::Keypair">Keypair</a>, use the <a href="fn.keypair_from_path.html" title="fn solana_clap_utils::keypair::keypair_from_path">keypair_from_path</a> function, though note that
+it does not support all signer sources.</p>
+<p>The <code>matches</code> argument is the same set of parsed <a href="https//docs.rs/clap">clap</a> matches from which
+<code>path</code> was parsed. It is used to parse various additional command line
+arguments, depending on which signing source is requested, as described
+below in “Signing sources”.</p>
+<p>The <code>keypair_name</code> argument is the “name” of the signer, and is typically
+the name of the clap argument from which the <code>path</code> argument was parsed,
+like “keypair”, “from”, or “fee-payer”. It is used solely for interactively
+prompting the user, either when entering seed phrases or selecting from
+multiple hardware wallets.</p>
+<p>The <code>wallet_manager</code> is used for establishing connections to a hardware
+device such as Ledger. If <code>wallet_manager</code> is a reference to <code>None</code>, and a
+hardware signer is requested, then this function will attempt to create a
+wallet manager, assigning it to the mutable <code>wallet_manager</code> reference. This
+argument is typically a reference to <code>None</code>.</p>
+<h2 id="signing-sources"><a href="#signing-sources">Signing sources</a></h2>
+<p>The <code>path</code> argument can simply be a path to a keypair file, but it may also
+be interpreted in several other ways, in the following order.</p>
+<p>Firstly, the <code>path</code> argument may be interpreted as a <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI</a>, with the URI
+scheme indicating where to load the signer from. If it parses as a URI, then
+the following schemes are supported:</p>
+<ul>
+<li>
+<p><code>file:</code> — Read the keypair from a JSON keypair file. The path portion
+of the URI is the file path.</p>
+</li>
+<li>
+<p><code>stdin:</code> — Read the keypair from stdin, in the JSON format used by
+the keypair file.</p>
+<p>Non-scheme parts of the URI are ignored.</p>
+</li>
+<li>
+<p><code>prompt:</code> — The user will be prompted at the command line
+for their seed phrase and passphrase.</p>
+<p>In this URI the <a href="https://en.wikipedia.org/wiki/Query_string">query string</a> may contain zero or one of the
+following key/value pairs that determine the <a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki">BIP44 derivation path</a>
+of the private key from the seed:</p>
+<ul>
+<li>
+<p><code>key</code> — In this case the value is either one or two numerical
+indexes separated by a slash, which represent the “account”, and
+“change” components of the BIP44 derivation path. Example: <code>key=0/0</code>.</p>
+</li>
+<li>
+<p><code>full-path</code> — In this case the value is a full derivation path,
+and the user is responsible for ensuring it is correct. Example:
+<code>full-path=m/44/501/0/0/0</code>.</p>
+</li>
+</ul>
+<p>If neither is provided, then the default derivation path is used.</p>
+<p>Note that when specifying derivation paths, this routine will convert all
+indexes into <a href="https://wiki.trezor.io/Hardened_and_non-hardened_derivation">“hardened”</a> indexes, even if written as “normal” indexes.</p>
+<p>Other components of the URI besides the scheme and query string are ignored.</p>
+<p>If the “skip_seed_phrase_validation” argument, as defined in
+<a href="constant.SKIP_SEED_PHRASE_VALIDATION_ARG.html" title="constant solana_clap_utils::keypair::SKIP_SEED_PHRASE_VALIDATION_ARG">SKIP_SEED_PHRASE_VALIDATION_ARG</a> is found in <code>matches</code>, then the keypair
+seed will be generated directly from the seed phrase, without parsing or
+validating it as a BIP39 seed phrase. This allows the use of non-BIP39 seed
+phrases.</p>
+</li>
+<li>
+<p><code>usb:</code> — Use a USB hardware device as the signer. In this case, the
+URI host indicates the device type, and is required. The only currently valid host
+value is “ledger”.</p>
+<p>Optionally, the first segment of the URI path indicates the base-58
+encoded pubkey of the wallet, and the “account” and “change” indices of
+the derivation path can be specified with the <code>key=</code> query parameter, as
+with the <code>prompt:</code> URI.</p>
+<p>Examples:</p>
+<ul>
+<li><code>usb://ledger</code></li>
+<li><code>usb://ledger?key=0/0</code></li>
+<li><code>usb://ledger/9rPVSygg3brqghvdZ6wsL2i5YNQTGhXGdJzF65YxaCQd</code></li>
+<li><code>usb://ledger/9rPVSygg3brqghvdZ6wsL2i5YNQTGhXGdJzF65YxaCQd?key=0/0</code></li>
+</ul>
+</li>
+</ul>
+<p>Next the <code>path</code> argument may be one of the following strings:</p>
+<ul>
+<li>
+<p><code>-</code> — Read the keypair from stdin. This is the same as the <code>stdin:</code>
+URI scheme.</p>
+</li>
+<li>
+<p><code>ASK</code> — The user will be prompted at the command line for their seed
+phrase and passphrase. <em>This uses a legacy key derivation method and should
+usually be avoided in favor of <code>prompt:</code>.</em></p>
+</li>
+</ul>
+<p>Next, if the <code>path</code> argument parses as a base-58 public key, then the signer
+is created without a private key, but with presigned signatures, each parsed
+from the additional command line arguments, provided by the <code>matches</code>
+argument.</p>
+<p>In this case, the remaining command line arguments are searched for clap
+arguments named “signer”, as defined by <a href="../offline/constant.SIGNER_ARG.html" title="constant solana_clap_utils::offline::SIGNER_ARG">SIGNER_ARG</a>, and each is parsed as
+a key-value pair of the form “pubkey=signature”, where <code>pubkey</code> is the same
+base-58 public key, and <code>signature</code> is a serialized signature produced by
+the corresponding keypair. One of the “signer” signatures must be for the
+pubkey specified in <code>path</code> or this function will return an error; unless the
+“sign_only” clap argument, as defined by <a href="../offline/constant.SIGN_ONLY_ARG.html" title="constant solana_clap_utils::offline::SIGN_ONLY_ARG">SIGN_ONLY_ARG</a>, is present in
+<code>matches</code>, in which case the signer will be created with no associated
+signatures.</p>
+<p>Finally, if <code>path</code>, interpreted as a file path, represents a file on disk,
+then the signer is created by reading that file as a JSON-serialized
+keypair. This is the same as the <code>file:</code> URI scheme.</p>
+<h2 id="examples"><a href="#examples">Examples</a></h2>
+<p>This shows a reasonable way to set up clap to parse all possible signer
+sources. Note the use of the <a href="../offline/trait.OfflineArgs.html#tymethod.offline_args" title="method solana_clap_utils::offline::OfflineArgs::offline_args"><code>OfflineArgs::offline_args</code></a> method to add
+correct clap definitions of the <code>--signer</code> and <code>--sign-only</code> arguments, as
+required by the base-58 pubkey offline signing method.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>clap::{App, Arg, value_t_or_exit};
+<span class="kw">use </span>solana_clap_utils::keypair::signer_from_path;
+<span class="kw">use </span>solana_clap_utils::offline::OfflineArgs;
+
+<span class="kw">let </span>clap_app = App::new(<span class="string">&quot;my-program&quot;</span>)
+    <span class="comment">// The argument we&#39;ll parse as a signer &quot;path&quot;
+    </span>.arg(Arg::with_name(<span class="string">&quot;keypair&quot;</span>)
+        .required(<span class="bool-val">true</span>)
+        .help(<span class="string">&quot;The default signer&quot;</span>))
+    .offline_args();
+
+<span class="kw">let </span>clap_matches = clap_app.get_matches();
+<span class="kw">let </span>keypair_str = <span class="macro">value_t_or_exit!</span>(clap_matches, <span class="string">&quot;keypair&quot;</span>, String);
+<span class="kw">let </span><span class="kw-2">mut </span>wallet_manager = <span class="prelude-val">None</span>;
+<span class="kw">let </span>signer = signer_from_path(
+    <span class="kw-2">&amp;</span>clap_matches,
+    <span class="kw-2">&amp;</span>keypair_str,
+    <span class="string">&quot;keypair&quot;</span>,
+    <span class="kw-2">&amp;mut </span>wallet_manager,
+)<span class="question-mark">?</span>;</code></pre></div>
+</div></details></section></div></main></body></html>

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["SLOTS_STATS_CACHE_CAPACITY"],"enum":["ShredSource"],"struct":["SlotFlags","SlotStats","SlotsStats"],"trait":["__BitFlags"]};

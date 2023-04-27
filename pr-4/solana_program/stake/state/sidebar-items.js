@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","VARIANTS"],"enum":["StakeAuthorize","StakeState","__Field"],"struct":["Authorized","Delegation","Lockup","Meta","Stake","__FieldVisitor","__Visitor"],"type":["StakeActivationStatus"]};

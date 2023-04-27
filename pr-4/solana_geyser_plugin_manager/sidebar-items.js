@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["accounts_update_notifier","block_metadata_notifier","block_metadata_notifier_interface","entry_notifier","geyser_plugin_manager","geyser_plugin_service","slot_status_notifier","slot_status_observer","transaction_notifier"]};

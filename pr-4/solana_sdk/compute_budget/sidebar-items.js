@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","ID","VARIANTS"],"enum":["ComputeBudgetInstruction","__Field"],"fn":["check_id","id"],"struct":["__FieldVisitor","__Visitor"]};

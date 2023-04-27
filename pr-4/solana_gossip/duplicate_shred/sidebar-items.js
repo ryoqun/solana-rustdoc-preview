@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DUPLICATE_SHRED_HEADER_SIZE","FIELDS","MAX_DUPLICATE_SHREDS"],"enum":["Error","__Field"],"fn":["check_chunk","check_shreds","from_shred","into_shreds"],"struct":["DuplicateShred","__DeserializeWith","__FieldVisitor","__SerializeWith","__Visitor"],"type":["DuplicateShredIndex"]};

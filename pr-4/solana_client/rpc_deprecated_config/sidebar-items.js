@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["RpcConfirmedBlocksConfigWrapper"],"struct":["RpcConfirmedBlockConfig","RpcConfirmedTransactionConfig","RpcGetConfirmedSignaturesForAddress2Config"]};

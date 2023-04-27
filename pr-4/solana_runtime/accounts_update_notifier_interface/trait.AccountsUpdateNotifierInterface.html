@@ -2,29 +2,29 @@
     // Required methods
     fn <a href="#tymethod.notify_account_update" class="fn">notify_account_update</a>(
         &amp;self,
-        slot: Slot,
-        account: &amp;AccountSharedData,
-        txn: &amp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;SanitizedTransaction&gt;,
-        pubkey: &amp;Pubkey,
+        slot: <a class="type" href="../../solana_program/clock/type.Slot.html" title="type solana_program::clock::Slot">Slot</a>,
+        account: &amp;<a class="struct" href="../../solana_sdk/account/struct.AccountSharedData.html" title="struct solana_sdk::account::AccountSharedData">AccountSharedData</a>,
+        txn: &amp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="struct" href="../../solana_sdk/transaction/sanitized/struct.SanitizedTransaction.html" title="struct solana_sdk::transaction::sanitized::SanitizedTransaction">SanitizedTransaction</a>&gt;,
+        pubkey: &amp;<a class="struct" href="../../solana_program/pubkey/struct.Pubkey.html" title="struct solana_program::pubkey::Pubkey">Pubkey</a>,
         write_version: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a>
     );
 <span class="item-spacer"></span>    fn <a href="#tymethod.notify_account_restore_from_snapshot" class="fn">notify_account_restore_from_snapshot</a>(
         &amp;self,
-        slot: Slot,
+        slot: <a class="type" href="../../solana_program/clock/type.Slot.html" title="type solana_program::clock::Slot">Slot</a>,
         account: &amp;<a class="enum" href="../account_storage/meta/enum.StoredAccountMeta.html" title="enum solana_runtime::account_storage::meta::StoredAccountMeta">StoredAccountMeta</a>&lt;'_&gt;
     );
 <span class="item-spacer"></span>    fn <a href="#tymethod.notify_end_of_restore_from_snapshot" class="fn">notify_end_of_restore_from_snapshot</a>(&amp;self);
 }</code></pre><h2 id="required-methods" class="small-section-header">Required Methods<a href="#required-methods" class="anchor">§</a></h2><div class="methods"><details class="toggle method-toggle" open><summary><section id="tymethod.notify_account_update" class="method"><a class="srclink rightside" href="../../src/solana_runtime/accounts_update_notifier_interface.rs.html#11-18">source</a><h4 class="code-header">fn <a href="#tymethod.notify_account_update" class="fn">notify_account_update</a>(
     &amp;self,
-    slot: Slot,
-    account: &amp;AccountSharedData,
-    txn: &amp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;SanitizedTransaction&gt;,
-    pubkey: &amp;Pubkey,
+    slot: <a class="type" href="../../solana_program/clock/type.Slot.html" title="type solana_program::clock::Slot">Slot</a>,
+    account: &amp;<a class="struct" href="../../solana_sdk/account/struct.AccountSharedData.html" title="struct solana_sdk::account::AccountSharedData">AccountSharedData</a>,
+    txn: &amp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="struct" href="../../solana_sdk/transaction/sanitized/struct.SanitizedTransaction.html" title="struct solana_sdk::transaction::sanitized::SanitizedTransaction">SanitizedTransaction</a>&gt;,
+    pubkey: &amp;<a class="struct" href="../../solana_program/pubkey/struct.Pubkey.html" title="struct solana_program::pubkey::Pubkey">Pubkey</a>,
     write_version: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a>
 )</h4></section></summary><div class="docblock"><p>Notified when an account is updated at runtime, due to transaction activities</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="tymethod.notify_account_restore_from_snapshot" class="method"><a class="srclink rightside" href="../../src/solana_runtime/accounts_update_notifier_interface.rs.html#22">source</a><h4 class="code-header">fn <a href="#tymethod.notify_account_restore_from_snapshot" class="fn">notify_account_restore_from_snapshot</a>(
     &amp;self,
-    slot: Slot,
+    slot: <a class="type" href="../../solana_program/clock/type.Slot.html" title="type solana_program::clock::Slot">Slot</a>,
     account: &amp;<a class="enum" href="../account_storage/meta/enum.StoredAccountMeta.html" title="enum solana_runtime::account_storage::meta::StoredAccountMeta">StoredAccountMeta</a>&lt;'_&gt;
 )</h4></section></summary><div class="docblock"><p>Notified when the AccountsDb is initialized at start when restored
 from a snapshot.</p>

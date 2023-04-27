@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["get_sysvar"],"struct":["SyscallGetClockSysvar","SyscallGetEpochScheduleSysvar","SyscallGetFeesSysvar","SyscallGetRentSysvar"]};

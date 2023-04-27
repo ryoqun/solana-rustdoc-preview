@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","VARIANTS"],"enum":["LoaderInstruction","__Field"],"fn":["finalize","write"],"struct":["__DeserializeWith","__FieldVisitor","__SerializeWith","__Visitor"]};
