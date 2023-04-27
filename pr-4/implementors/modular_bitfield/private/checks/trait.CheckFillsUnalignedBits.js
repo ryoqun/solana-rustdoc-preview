@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"solana_runtime":[["impl CheckFillsUnalignedBits for <a class=\"struct\" href=\"solana_runtime/account_info/struct.PackedOffsetAndFlags.html\" title=\"struct solana_runtime::account_info::PackedOffsetAndFlags\">PackedOffsetAndFlags</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

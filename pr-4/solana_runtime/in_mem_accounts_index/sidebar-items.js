@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["N"],"enum":["InsertNewEntryResults"],"struct":["EvictionsGuard","FlushGuard","FlushScanResult","InMemAccountsIndex","PossibleEvictions","StartupInfo","StartupInfoDuplicates"],"type":["CacheRangesHeld","InMemMap","K"]};

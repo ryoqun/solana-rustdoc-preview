@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["StakeHistory","__Visitor"],"type":["StakeHistoryInner"]};
