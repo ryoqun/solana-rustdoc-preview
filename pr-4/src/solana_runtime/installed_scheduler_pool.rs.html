@@ -553,7 +553,7 @@
 ///  ```mermaid
 ///  graph TD
 ///      Bank[&quot;Arc&amp;lt;Bank&amp;gt;&quot;]
-///  
+///
 ///      subgraph solana-runtime
 ///          BankForks;
 ///          subgraph cyclic-ref
@@ -563,34 +563,34 @@
 ///          end
 ///          InstalledSchedulerPool{{InstalledSchedulerPool}};
 ///      end
-///  
+///
 ///      subgraph solana-ledger
 ///          ExecuteBatch([&quot;execute_batch()&quot;]);
 ///      end
-///  
+///
 ///      subgraph solana-scheduler-pool
 ///          SchedulerPool;
-///          SchedulerPoolScheduler[Scheduler];
+///          PooledScheduler;
 ///      end
-///  
+///
 ///      subgraph solana-scheduler
 ///          WithSchedulingMode{{WithSchedulingMode}};
 ///      end
-///  
+///
 ///      SchedulingContext -- refs --&gt; Bank;
 ///      BankForks -- owns --&gt; Bank;
 ///      BankForks -- owns --&gt; InstalledSchedulerPool;
 ///      Bank -- refs --&gt; InstalledScheduler;
-///  
+///
 ///      SchedulerPool -. impls .-&gt; InstalledSchedulerPool;
-///      SchedulerPoolScheduler -. impls .-&gt; InstalledScheduler;
+///      PooledScheduler -. impls .-&gt; InstalledScheduler;
 ///      InstalledScheduler -- refs --&gt; SchedulingContext;
 ///      SchedulingContext -. impls .-&gt; WithSchedulingMode;
-///  
-///      SchedulerPoolScheduler -- refs --&gt; SchedulerPool;
-///      SchedulerPool -- owns --&gt; SchedulerPoolScheduler;
-///      SchedulerPoolScheduler -. calls .-&gt; ExecuteBatch;
-///  
+///
+///      PooledScheduler -- refs --&gt; SchedulerPool;
+///      SchedulerPool -- owns --&gt; PooledScheduler;
+///      PooledScheduler -. calls .-&gt; ExecuteBatch;
+///
 ///      solana-scheduler-pool -- deps --&gt; solana-scheduler;
 ///      solana-scheduler-pool -- deps --&gt; solana-ledger;
 ///      solana-scheduler-pool -- deps --&gt; solana-runtime;
