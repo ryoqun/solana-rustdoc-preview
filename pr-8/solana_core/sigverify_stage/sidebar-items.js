@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEDUPER_FALSE_POSITIVE_RATE","DEDUPER_NUM_BITS","MAX_DEDUPER_AGE","MAX_DEDUP_BATCH","MAX_DISCARDED_PACKET_RATE","MAX_SIGVERIFY_BATCH"],"enum":["SigVerifyServiceError"],"struct":["DisabledSigVerifier","SigVerifierStats","SigVerifyStage"],"trait":["SigVerifier"],"type":["Result"]};

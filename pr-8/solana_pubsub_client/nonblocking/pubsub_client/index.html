@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="A client for subscribing to messages from the RPC server."><title>solana_pubsub_client::nonblocking::pubsub_client - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-ba5701c5741a7b69.css" id="mainThemeStyle"><div id="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="solana_pubsub_client" data-themes="" data-resource-suffix="" data-rustdoc-version="1.71.0-nightly (1a6ae3d69 2023-04-27)" data-search-js="search-618e954b235f6acc.js" data-settings-js="settings-de11bff964e9d4e5.js" data-settings-css="settings-6f6ffb5395b17c6e.css" data-theme-light-css="light-0f8c037637f9eb3e.css" data-theme-dark-css="dark-1097f8e92a01e3cf.css" data-theme-ayu-css="ayu-614652228113ac93.css" ></div><script src="../../../static.files/storage-62ce34ea385b278a.js"></script><script defer src="../../../static.files/main-f0540c1d82cde29b.js"></script><noscript><link rel="stylesheet" media="(prefers-color-scheme:light)" href="../../../static.files/light-0f8c037637f9eb3e.css"><link rel="stylesheet" media="(prefers-color-scheme:dark)" href="../../../static.files/dark-1097f8e92a01e3cf.css"><link rel="stylesheet" href="../../../static.files/noscript-13285aec31fa243e.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../../../solana_pubsub_client/index.html"><img class="rust-logo" src="../../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2></h2></nav><nav class="sidebar"><a class="logo-container" href="../../../solana_pubsub_client/index.html"><img class="rust-logo" src="../../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2 class="location"><a href="#">Module pubsub_client</a></h2><div class="sidebar-elems"><section><ul class="block"><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#constants">Constants</a></li><li><a href="#types">Type Definitions</a></li></ul></section></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Module <a href="../../index.html">solana_pubsub_client</a>::<wbr><a href="../index.html">nonblocking</a>::<wbr><a class="mod" href="#">pubsub_client</a><button id="copy-path" title="Copy item path to clipboard"><img src="../../../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="srclink" href="../../../src/solana_pubsub_client/nonblocking/pubsub_client.rs.html#1-712">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>A client for subscribing to messages from the RPC server.</p>
+<p>The <a href="struct.PubsubClient.html" title="struct solana_pubsub_client::nonblocking::pubsub_client::PubsubClient"><code>PubsubClient</code></a> implements <a href="https://docs.solana.com/developing/clients/jsonrpc-api#subscription-websocket">Solana WebSocket event
+subscriptions</a>.</p>
+<p>This is a nonblocking (async) API. For a blocking API use the synchronous
+client in <a href="../../pubsub_client/index.html" title="mod solana_pubsub_client::pubsub_client"><code>crate::pubsub_client</code></a>.</p>
+<p>A single <code>PubsubClient</code> client may be used to subscribe to many events via
+subscription methods like <a href="struct.PubsubClient.html#method.account_subscribe" title="method solana_pubsub_client::nonblocking::pubsub_client::PubsubClient::account_subscribe"><code>PubsubClient::account_subscribe</code></a>. These methods
+return a <a href="type.PubsubClientResult.html" title="type solana_pubsub_client::nonblocking::pubsub_client::PubsubClientResult"><code>PubsubClientResult</code></a> of a pair, the first element being a
+[<code>BoxStream</code>] of subscription-specific [<code>RpcResponse</code>]s, the second being an
+unsubscribe closure, an asynchronous function that can be called and
+<code>await</code>ed to unsubscribe.</p>
+<p>Note that <code>BoxStream</code> contains an immutable reference to the <code>PubsubClient</code>
+that created it. This makes <code>BoxStream</code> not <code>Send</code>, forcing it to stay in
+the same task as its <code>PubsubClient</code>. <code>PubsubClient</code> though is <code>Send</code> and
+<code>Sync</code>, and can be shared between tasks by putting it in an <code>Arc</code>. Thus
+one viable pattern to creating multiple subscriptions is:</p>
+<ul>
+<li>create an <code>Arc&lt;PubsubClient&gt;</code></li>
+<li>spawn one task for each subscription, sharing the <code>PubsubClient</code>.</li>
+<li>in each task:
+<ul>
+<li>create a subscription</li>
+<li>send the <code>UnsubscribeFn</code> to another task to handle shutdown</li>
+<li>loop while receiving messages from the subscription</li>
+</ul>
+</li>
+</ul>
+<p>This pattern is illustrated in the example below.</p>
+<p>By default the <a href="https://docs.rs/solana-rpc/latest/solana_rpc/rpc_pubsub/trait.RpcSolPubSub.html#tymethod.block_subscribe"><code>block_subscribe</code></a> and <a href="https://docs.rs/solana-rpc/latest/solana_rpc/rpc_pubsub/trait.RpcSolPubSub.html#tymethod.vote_subscribe"><code>vote_subscribe</code></a> events are
+disabled on RPC nodes. They can be enabled by passing
+<code>--rpc-pubsub-enable-block-subscription</code> and
+<code>--rpc-pubsub-enable-vote-subscription</code> to <code>solana-validator</code>. When these
+methods are disabled, the RPC server will return a “Method not found” error
+message.</p>
+<h2 id="examples"><a href="#examples">Examples</a></h2>
+<p>Demo two async <code>PubsubClient</code> subscriptions with clean shutdown.</p>
+<p>This spawns a task for each subscription type, each of which subscribes and
+sends back a ready message and an unsubscribe channel (closure), then loops
+on printing messages. The main task then waits for user input before
+unsubscribing and waiting on the tasks.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>anyhow::Result;
+<span class="kw">use </span>futures_util::StreamExt;
+<span class="kw">use </span>solana_pubsub_client::nonblocking::pubsub_client::PubsubClient;
+<span class="kw">use </span>std::sync::Arc;
+<span class="kw">use </span>tokio::io::AsyncReadExt;
+<span class="kw">use </span>tokio::sync::mpsc::unbounded_channel;
+
+<span class="kw">pub async fn </span>watch_subscriptions(
+    websocket_url: <span class="kw-2">&amp;</span>str,
+) -&gt; <span class="prelude-ty">Result</span>&lt;()&gt; {
+
+    <span class="comment">// Subscription tasks will send a ready signal when they have subscribed.
+    </span><span class="kw">let </span>(ready_sender, <span class="kw-2">mut </span>ready_receiver) = unbounded_channel::&lt;()&gt;();
+
+    <span class="comment">// Channel to receive unsubscribe channels (actually closures).
+    // These receive a pair of `(Box&lt;dyn FnOnce() -&gt; BoxFuture&lt;&#39;static, ()&gt; + Send&gt;), &amp;&#39;static str)`,
+    // where the first is a closure to call to unsubscribe, the second is the subscription name.
+    </span><span class="kw">let </span>(unsubscribe_sender, <span class="kw-2">mut </span>unsubscribe_receiver) = unbounded_channel::&lt;(<span class="kw">_</span>, <span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span>str)&gt;();
+
+    <span class="comment">// The `PubsubClient` must be `Arc`ed to share it across tasks.
+    </span><span class="kw">let </span>pubsub_client = Arc::new(PubsubClient::new(websocket_url).<span class="kw">await</span><span class="question-mark">?</span>);
+
+    <span class="kw">let </span><span class="kw-2">mut </span>join_handles = <span class="macro">vec!</span>[];
+
+    join_handles.push((<span class="string">&quot;slot&quot;</span>, tokio::spawn({
+        <span class="comment">// Clone things we need before moving their clones into the `async move` block.
+        //
+        // The subscriptions have to be made from the tasks that will receive the subscription messages,
+        // because the subscription streams hold a reference to the `PubsubClient`.
+        // Otherwise we would just subscribe on the main task and send the receivers out to other tasks.
+
+        </span><span class="kw">let </span>ready_sender = ready_sender.clone();
+        <span class="kw">let </span>unsubscribe_sender = unsubscribe_sender.clone();
+        <span class="kw">let </span>pubsub_client = Arc::clone(<span class="kw-2">&amp;</span>pubsub_client);
+        <span class="kw">async move </span>{
+            <span class="kw">let </span>(<span class="kw-2">mut </span>slot_notifications, slot_unsubscribe) =
+                pubsub_client.slot_subscribe().<span class="kw">await</span><span class="question-mark">?</span>;
+
+            <span class="comment">// With the subscription started,
+            // send a signal back to the main task for synchronization.
+            </span>ready_sender.send(()).expect(<span class="string">&quot;channel&quot;</span>);
+
+            <span class="comment">// Send the unsubscribe closure back to the main task.
+            </span>unsubscribe_sender.send((slot_unsubscribe, <span class="string">&quot;slot&quot;</span>))
+                .map_err(|e| <span class="macro">format!</span>(<span class="string">&quot;{}&quot;</span>, e)).expect(<span class="string">&quot;channel&quot;</span>);
+
+            <span class="comment">// Drop senders so that the channels can close.
+            // The main task will receive until channels are closed.
+            </span>drop((ready_sender, unsubscribe_sender));
+
+            <span class="comment">// Do something with the subscribed messages.
+            // This loop will end once the main task unsubscribes.
+            </span><span class="kw">while let </span><span class="prelude-val">Some</span>(slot_info) = slot_notifications.next().<span class="kw">await </span>{
+                <span class="macro">println!</span>(<span class="string">&quot;------------------------------------------------------------&quot;</span>);
+                <span class="macro">println!</span>(<span class="string">&quot;slot pubsub result: {:?}&quot;</span>, slot_info);
+            }
+
+            <span class="comment">// This type hint is necessary to allow the `async move` block to use `?`.
+            </span><span class="prelude-val">Ok</span>::&lt;<span class="kw">_</span>, anyhow::Error&gt;(())
+        }
+    })));
+
+    join_handles.push((<span class="string">&quot;root&quot;</span>, tokio::spawn({
+        <span class="kw">let </span>ready_sender = ready_sender.clone();
+        <span class="kw">let </span>unsubscribe_sender = unsubscribe_sender.clone();
+        <span class="kw">let </span>pubsub_client = Arc::clone(<span class="kw-2">&amp;</span>pubsub_client);
+        <span class="kw">async move </span>{
+            <span class="kw">let </span>(<span class="kw-2">mut </span>root_notifications, root_unsubscribe) =
+                pubsub_client.root_subscribe().<span class="kw">await</span><span class="question-mark">?</span>;
+
+            ready_sender.send(()).expect(<span class="string">&quot;channel&quot;</span>);
+            unsubscribe_sender.send((root_unsubscribe, <span class="string">&quot;root&quot;</span>))
+                .map_err(|e| <span class="macro">format!</span>(<span class="string">&quot;{}&quot;</span>, e)).expect(<span class="string">&quot;channel&quot;</span>);
+            drop((ready_sender, unsubscribe_sender));
+
+            <span class="kw">while let </span><span class="prelude-val">Some</span>(root) = root_notifications.next().<span class="kw">await </span>{
+                <span class="macro">println!</span>(<span class="string">&quot;------------------------------------------------------------&quot;</span>);
+                <span class="macro">println!</span>(<span class="string">&quot;root pubsub result: {:?}&quot;</span>, root);
+            }
+
+            <span class="prelude-val">Ok</span>::&lt;<span class="kw">_</span>, anyhow::Error&gt;(())
+        }
+    })));
+
+    <span class="comment">// Drop these senders so that the channels can close
+    // and their receivers return `None` below.
+    </span>drop(ready_sender);
+    drop(unsubscribe_sender);
+
+    <span class="comment">// Wait until all subscribers are ready before proceeding with application logic.
+    </span><span class="kw">while let </span><span class="prelude-val">Some</span>(<span class="kw">_</span>) = ready_receiver.recv().<span class="kw">await </span>{ }
+
+    <span class="comment">// Do application logic here.
+
+    // Wait for input or some application-specific shutdown condition.
+    </span>tokio::io::stdin().read_u8().<span class="kw">await</span><span class="question-mark">?</span>;
+
+    <span class="comment">// Unsubscribe from everything, which will shutdown all the tasks.
+    </span><span class="kw">while let </span><span class="prelude-val">Some</span>((unsubscribe, name)) = unsubscribe_receiver.recv().<span class="kw">await </span>{
+        <span class="macro">println!</span>(<span class="string">&quot;unsubscribing from {}&quot;</span>, name);
+        unsubscribe().<span class="kw">await
+    </span>}
+
+    <span class="comment">// Wait for the tasks.
+    </span><span class="kw">for </span>(name, handle) <span class="kw">in </span>join_handles {
+        <span class="macro">println!</span>(<span class="string">&quot;waiting on task {}&quot;</span>, name);
+        <span class="kw">if let </span><span class="prelude-val">Ok</span>(<span class="prelude-val">Err</span>(e)) = handle.<span class="kw">await </span>{
+            <span class="macro">println!</span>(<span class="string">&quot;task {} failed: {}&quot;</span>, name, e);
+        }
+    }
+
+    <span class="prelude-val">Ok</span>(())
+}</code></pre></div>
+</div></details><h2 id="modules" class="small-section-header"><a href="#modules">Modules</a></h2><ul class="item-table"><li><div class="item-name"><a class="mod" href="util/index.html" title="mod solana_pubsub_client::nonblocking::pubsub_client::util">util</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li></ul><h2 id="structs" class="small-section-header"><a href="#structs">Structs</a></h2><ul class="item-table"><li><div class="item-name"><a class="struct" href="struct.PubsubClient.html" title="struct solana_pubsub_client::nonblocking::pubsub_client::PubsubClient">PubsubClient</a></div><div class="desc docblock-short">A client for subscribing to messages from the RPC server.</div></li></ul><h2 id="enums" class="small-section-header"><a href="#enums">Enums</a></h2><ul class="item-table"><li><div class="item-name"><a class="enum" href="enum.PubsubClientError.html" title="enum solana_pubsub_client::nonblocking::pubsub_client::PubsubClientError">PubsubClientError</a></div></li></ul><h2 id="constants" class="small-section-header"><a href="#constants">Constants</a></h2><ul class="item-table"><li><div class="item-name"><a class="constant" href="constant.BRANCHES.html" title="constant solana_pubsub_client::nonblocking::pubsub_client::BRANCHES">BRANCHES</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li></ul><h2 id="types" class="small-section-header"><a href="#types">Type Definitions</a></h2><ul class="item-table"><li><div class="item-name"><a class="type" href="type.PubsubClientResult.html" title="type solana_pubsub_client::nonblocking::pubsub_client::PubsubClientResult">PubsubClientResult</a></div></li><li><div class="item-name"><a class="type" href="type.RequestMsg.html" title="type solana_pubsub_client::nonblocking::pubsub_client::RequestMsg">RequestMsg</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li><li><div class="item-name"><a class="type" href="type.SubscribeRequestMsg.html" title="type solana_pubsub_client::nonblocking::pubsub_client::SubscribeRequestMsg">SubscribeRequestMsg</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li><li><div class="item-name"><a class="type" href="type.SubscribeResponseMsg.html" title="type solana_pubsub_client::nonblocking::pubsub_client::SubscribeResponseMsg">SubscribeResponseMsg</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li><li><div class="item-name"><a class="type" href="type.SubscribeResult.html" title="type solana_pubsub_client::nonblocking::pubsub_client::SubscribeResult">SubscribeResult</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li><li><div class="item-name"><a class="type" href="type.UnsubscribeFn.html" title="type solana_pubsub_client::nonblocking::pubsub_client::UnsubscribeFn">UnsubscribeFn</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li></ul></section></div></main></body></html>

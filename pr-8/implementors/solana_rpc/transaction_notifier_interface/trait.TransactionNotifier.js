@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"solana_geyser_plugin_manager":[["impl TransactionNotifier for <a class=\"struct\" href=\"solana_geyser_plugin_manager/transaction_notifier/struct.TransactionNotifierImpl.html\" title=\"struct solana_geyser_plugin_manager::transaction_notifier::TransactionNotifierImpl\">TransactionNotifierImpl</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

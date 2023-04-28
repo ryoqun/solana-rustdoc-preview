@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["HID_GLOBAL_USAGE_PAGE","HID_USB_DEVICE_CLASS"],"enum":["RemoteWalletError","RemoteWalletType"],"fn":["initialize_wallet_manager","is_valid_hid_device","maybe_wallet_manager"],"struct":["Device","RemoteWalletInfo","RemoteWalletManager"],"trait":["RemoteWallet"]};

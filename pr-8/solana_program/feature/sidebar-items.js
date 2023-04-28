@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","ID"],"enum":["__Field"],"fn":["activate","activate_with_lamports","check_id","id"],"struct":["Feature","__FieldVisitor","__Visitor"]};

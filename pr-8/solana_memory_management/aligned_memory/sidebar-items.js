@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["AlignedMemory"],"trait":["Pod"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"mod":["convert"],"struct":["StoredExtendedReward","StoredTokenAmount","StoredTransactionStatusMeta","StoredTransactionTokenBalance","__DeserializeWith","__FieldVisitor","__Visitor"],"type":["StoredExtendedRewards"]};

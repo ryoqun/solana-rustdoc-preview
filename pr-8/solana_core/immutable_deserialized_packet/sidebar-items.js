@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["DeserializedPacketError"],"fn":["packet_message"],"struct":["ImmutableDeserializedPacket"]};

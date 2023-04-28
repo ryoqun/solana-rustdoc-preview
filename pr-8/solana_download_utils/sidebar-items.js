@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["download_file","download_genesis_if_missing","download_snapshot_archive","new_spinner_progress_bar"],"static":["SPARKLE","TRUCK"],"struct":["DownloadProgressRecord"],"type":["DownloadProgressCallback","DownloadProgressCallbackOption"]};

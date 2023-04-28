@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["gen_client","rpc_impl_DeprecatedV1_9"],"struct":["DeprecatedV1_9Client","DeprecatedV1_9Impl"],"trait":["DeprecatedV1_9"]};

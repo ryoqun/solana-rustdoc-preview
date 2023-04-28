@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["build_solana","build_solana_package","check_undefined_symbols","find_installed_platform_tools","get_latest_platform_tools_version","install_if_missing","is_version_string","link_solana_toolchain","main","make_platform_tools_path_for_version","normalize_version","postprocess_dump","spawn","validate_platform_tools_version"],"struct":["Config"]};

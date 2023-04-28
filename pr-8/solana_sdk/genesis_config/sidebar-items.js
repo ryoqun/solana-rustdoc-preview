@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEFAULT_GENESIS_ARCHIVE","DEFAULT_GENESIS_DOWNLOAD_PATH","DEFAULT_GENESIS_FILE","FIELDS","UNUSED_DEFAULT","VARIANTS"],"enum":["ClusterType","__Field"],"fn":["create_genesis_config"],"struct":["GenesisConfig","__FieldVisitor","__Visitor"]};

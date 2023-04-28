@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["next_account_info","next_account_infos"],"struct":["AccountInfo"],"trait":["Account","IntoAccountInfo"]};

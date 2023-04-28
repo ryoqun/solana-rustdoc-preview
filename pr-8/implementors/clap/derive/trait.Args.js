@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"solana_dos":[["impl Args for <a class=\"struct\" href=\"solana_dos/cli/struct.DosClientParameters.html\" title=\"struct solana_dos::cli::DosClientParameters\">DosClientParameters</a>"],["impl Args for <a class=\"struct\" href=\"solana_dos/cli/struct.TransactionParams.html\" title=\"struct solana_dos::cli::TransactionParams\">TransactionParams</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
