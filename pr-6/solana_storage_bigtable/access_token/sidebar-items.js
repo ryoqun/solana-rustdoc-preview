@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Scope"],"fn":["load_credentials","load_stringified_credentials"],"struct":["AccessToken"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","MAX_PRINT_BITS"],"enum":["__Field"],"fn":["slice_hash"],"struct":["AtomicBloom","Bloom","__FieldVisitor","__Visitor"],"trait":["BloomHashIndex"]};

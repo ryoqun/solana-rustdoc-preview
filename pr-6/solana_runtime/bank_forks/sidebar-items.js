@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MAX_ROOT_DISTANCE_FOR_VOTE_ONLY"],"struct":["BankForks","ReadOnlyAtomicSlot","SetRootMetrics","SetRootTimings"],"type":["AtomicSlot"]};

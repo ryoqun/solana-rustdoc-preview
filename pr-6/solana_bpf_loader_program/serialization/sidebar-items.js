@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MAX_INSTRUCTION_ACCOUNTS"],"enum":["SerializeAccount"],"fn":["deserialize_parameters","deserialize_parameters_aligned","deserialize_parameters_unaligned","serialize_parameters","serialize_parameters_aligned","serialize_parameters_unaligned"],"struct":["Serializer"]};

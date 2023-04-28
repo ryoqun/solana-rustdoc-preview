@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"static":["INC_NEW_COUNTER","INIT_HOOK"],"struct":["BlockMetadataNotifierImpl"]};

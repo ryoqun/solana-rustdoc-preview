@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MAX_ENCODING_LENGTH"],"enum":["VisitError","VisitStatus"],"fn":["decode_shortu16_len","deserialize","serialize","visit_byte"],"struct":["ShortU16","ShortU16Visitor","ShortVec","ShortVecVisitor"],"type":["VisitResult"]};

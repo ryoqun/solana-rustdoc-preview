@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["AccountsPackageType","SnapshotType"],"fn":["cmp_accounts_package_types_by_priority","cmp_accounts_packages_by_priority","cmp_snapshot_packages_by_priority","cmp_snapshot_types_by_priority","retain_max_n_elements"],"mod":["compare"],"struct":["AccountsPackage","SnapshotPackage","SupplementalSnapshotInfo"]};

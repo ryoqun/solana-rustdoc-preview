@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["bigtable_process_command","block","blocks","compare_blocks","confirm","copy","delete_slots","first_available_block","get_bigtable","get_global_subcommand_arg","missing_blocks","transaction_history","upload"],"struct":["CopyArgs","GetBigtableArgs"],"trait":["BigTableSubCommand"]};

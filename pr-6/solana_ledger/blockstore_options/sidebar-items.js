@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["BLOCKSTORE_DIRECTORY_ROCKS_FIFO","BLOCKSTORE_DIRECTORY_ROCKS_LEVEL","MAX_ROCKS_FIFO_SHRED_STORAGE_SIZE_BYTES"],"enum":["AccessType","BlockstoreCompressionType","BlockstoreRecoveryMode","ShredStorageType"],"struct":["BlockstoreOptions","BlockstoreRocksFifoOptions","LedgerColumnOptions"]};

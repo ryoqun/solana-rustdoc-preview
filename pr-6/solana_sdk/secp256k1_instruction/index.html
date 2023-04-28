@@ -1,0 +1,622 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Instructions for the secp256k1 native program."><title>solana_sdk::secp256k1_instruction - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-ba5701c5741a7b69.css" id="mainThemeStyle"><div id="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="solana_sdk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.71.0-nightly (1a6ae3d69 2023-04-27)" data-search-js="search-618e954b235f6acc.js" data-settings-js="settings-de11bff964e9d4e5.js" data-settings-css="settings-6f6ffb5395b17c6e.css" data-theme-light-css="light-0f8c037637f9eb3e.css" data-theme-dark-css="dark-1097f8e92a01e3cf.css" data-theme-ayu-css="ayu-614652228113ac93.css" ></div><script src="../../static.files/storage-62ce34ea385b278a.js"></script><script defer src="../../static.files/main-f0540c1d82cde29b.js"></script><noscript><link rel="stylesheet" media="(prefers-color-scheme:light)" href="../../static.files/light-0f8c037637f9eb3e.css"><link rel="stylesheet" media="(prefers-color-scheme:dark)" href="../../static.files/dark-1097f8e92a01e3cf.css"><link rel="stylesheet" href="../../static.files/noscript-13285aec31fa243e.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../../solana_sdk/index.html"><img class="rust-logo" src="../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2></h2></nav><nav class="sidebar"><a class="logo-container" href="../../solana_sdk/index.html"><img class="rust-logo" src="../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2 class="location"><a href="#">Module secp256k1_instruction</a></h2><div class="sidebar-elems"><section><ul class="block"><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#constants">Constants</a></li><li><a href="#functions">Functions</a></li></ul></section></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Module <a href="../index.html">solana_sdk</a>::<wbr><a class="mod" href="#">secp256k1_instruction</a><button id="copy-path" title="Copy item path to clipboard"><img src="../../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="srclink" href="../../src/solana_sdk/secp256k1_instruction.rs.html#1-1354">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Instructions for the <a href="https://docs.solana.com/developing/runtime-facilities/programs#secp256k1-program">secp256k1 native program</a>.</p>
+<p><em>This module provides low-level cryptographic building blocks that must be
+used carefully to ensure proper security. Read this documentation and
+accompanying links thoroughly.</em></p>
+<p>The secp26k1 native program peforms flexible verification of <a href="https://en.bitcoin.it/wiki/Secp256k1">secp256k1</a>
+ECDSA signatures, as used by Ethereum. It can verify up to 255 signatures on
+up to 255 messages, with those signatures, messages, and their public keys
+arbitrarily distributed across the instruction data of any instructions in
+the same transaction as the secp256k1 instruction.</p>
+<p>The secp256k1 native program ID is located in the <a href="../secp256k1_program/index.html" title="mod solana_sdk::secp256k1_program"><code>secp256k1_program</code></a> module.</p>
+<p>The instruction is designed for Ethereum interoperability, but may be useful
+for other purposes. It operates on Ethereum addresses, which are <a href="../keccak/index.html" title="mod solana_sdk::keccak"><code>keccak</code></a>
+hashes of secp256k1 public keys, and internally is implemented using the
+secp256k1 key recovery algorithm. Ethereum address can be created for
+secp256k1 public keys with the <a href="fn.construct_eth_pubkey.html" title="fn solana_sdk::secp256k1_instruction::construct_eth_pubkey"><code>construct_eth_pubkey</code></a> function.</p>
+<p>This instruction does not directly allow for key recovery as in Ethereum’s
+<a href="https://docs.soliditylang.org/en/v0.8.14/units-and-global-variables.html?highlight=ecrecover#mathematical-and-cryptographic-functions"><code>ecrecover</code></a> precompile. For that Solana provides the <a href="../secp256k1_recover/index.html" title="mod solana_sdk::secp256k1_recover"><code>secp256k1_recover</code></a>
+syscall.</p>
+<p>Use cases for the secp256k1 instruction include:</p>
+<ul>
+<li>Verifying Ethereum transaction signatures.</li>
+<li>Verifying Ethereum <a href="https://eips.ethereum.org/EIPS/eip-712">EIP-712</a> signatures.</li>
+<li>Verifying arbitrary secp256k1 signatures.</li>
+<li>Signing a single message with multiple signatures.</li>
+</ul>
+<p>The <a href="fn.new_secp256k1_instruction.html" title="fn solana_sdk::secp256k1_instruction::new_secp256k1_instruction"><code>new_secp256k1_instruction</code></a> function is suitable for building a
+secp256k1 program instruction for basic use cases were a single message must
+be signed by a known secret key. For other uses cases, including many
+Ethereum-integration use cases, construction of the secp256k1 instruction
+must be done manually.</p>
+<h2 id="how-to-use-this-program"><a href="#how-to-use-this-program">How to use this program</a></h2>
+<p>Transactions that uses the secp256k1 native program will typically include
+at least two instructions: one for the secp256k1 program to verify the
+signatures, and one for a custom program that will check that the secp256k1
+instruction data matches what the program expects (using
+<a href="../sysvar/instructions/fn.load_instruction_at_checked.html" title="fn solana_sdk::sysvar::instructions::load_instruction_at_checked"><code>load_instruction_at_checked</code></a> or <a href="../sysvar/instructions/fn.get_instruction_relative.html" title="fn solana_sdk::sysvar::instructions::get_instruction_relative"><code>get_instruction_relative</code></a>). The
+signatures, messages, and Ethereum addresses being verified may reside in the
+instruction data of either of these instructions, or in the instruction data
+of one or more additional instructions, as long as those instructions are in
+the same transaction.</p>
+<p>Correct use of this program involves multiple steps, in client code and
+program code:</p>
+<ul>
+<li>In the client:
+<ul>
+<li>Sign the <a href="../keccak/index.html" title="mod solana_sdk::keccak"><code>keccak</code></a>-hashed messages with a secp256k1 ECDSA library,
+like the <a href="https://docs.rs/libsecp256k1/latest/libsecp256k1"><code>libsecp256k1</code></a> crate.</li>
+<li>Build any custom instruction data that contain signature, message, or
+Ethereum address data that will be used by the secp256k1 instruction.</li>
+<li>Build the secp256k1 program instruction data, specifying the number of
+signatures to verify, the instruction indexes within the transaction,
+and offsets within those instruction’s data, where the signatures,
+messages, and Ethereum addresses are located.</li>
+<li>Build the custom instruction for the program that will check the results
+of the secp256k1 native program.</li>
+<li>Package all instructions into a single transaction and submit them.</li>
+</ul>
+</li>
+<li>In the program:
+<ul>
+<li>Load the secp256k1 instruction data with
+<a href="../sysvar/instructions/fn.load_instruction_at_checked.html" title="fn solana_sdk::sysvar::instructions::load_instruction_at_checked"><code>load_instruction_at_checked</code></a>. or <a href="../sysvar/instructions/fn.get_instruction_relative.html" title="fn solana_sdk::sysvar::instructions::get_instruction_relative"><code>get_instruction_relative</code></a>.</li>
+<li>Check that the secp256k1 program ID is equal to
+<a href="../secp256k1_program/constant.ID.html" title="constant solana_sdk::secp256k1_program::ID"><code>secp256k1_program::ID</code></a>, so that the signature verification cannot be
+faked with a malicious program.</li>
+<li>Check that the public keys and messages are the expected values per
+the program’s requirements.</li>
+</ul>
+</li>
+</ul>
+<p>The signature, message, or Ethereum addresses may reside in the secp256k1
+instruction data itself as additional data, their bytes following the bytes
+of the protocol required by the secp256k1 instruction to locate the
+signature, message, and Ethereum address data. This is the technique used by
+<code>new_secp256k1_instruction</code> for simple signature verification.</p>
+<p>The <code>solana_sdk</code> crate provides few APIs for building the instructions and
+transactions necessary for properly using the secp256k1 native program.
+Many steps must be done manually.</p>
+<p>The <code>solana_program</code> crate provides no APIs to assist in interpreting
+the the secp256k1 instruction data. It must be done manually.</p>
+<p>The secp256k1 program is implemented with the <a href="https://docs.rs/libsecp256k1/latest/libsecp256k1"><code>libsecp256k1</code></a> crate,
+which clients may also want to use.</p>
+<h2 id="layout-and-interpretation-of-the-secp256k1-instruction-data"><a href="#layout-and-interpretation-of-the-secp256k1-instruction-data">Layout and interpretation of the secp256k1 instruction data</a></h2>
+<p>The secp256k1 instruction data contains:</p>
+<ul>
+<li>1 byte indicating the number of signatures to verify, 0 - 255,</li>
+<li>A number of <em>signature offset</em> structures that indicate where in the
+transaction to locate each signature, message, and Ethereum address.</li>
+<li>0 or more bytes of arbitrary data, which may contain signatures,
+messages or Ethereum addresses.</li>
+</ul>
+<p>The signature offset structure is defined by <a href="struct.SecpSignatureOffsets.html" title="struct solana_sdk::secp256k1_instruction::SecpSignatureOffsets"><code>SecpSignatureOffsets</code></a>,
+and can be serialized to the correct format with <a href="https://docs.rs/bincode/1.3.3/bincode/fn.serialize_into.html"><code>bincode::serialize_into</code></a>.
+Note that the bincode format may not be stable,
+and callers should ensure they use the same version of <code>bincode</code> as the Solana SDK.
+This data structure is not provided to Solana programs,
+which are expected to interpret the signature offsets manually.</p>
+<p>The serialized signature offset structure has the following 11-byte layout,
+with data types in little-endian encoding.</p>
+<div><table><thead><tr><th>index</th><th>bytes</th><th>type</th><th>description</th></tr></thead><tbody>
+<tr><td>0</td><td>2</td><td><code>u16</code></td><td><code>signature_offset</code> - offset to 64-byte signature plus 1-byte recovery ID.</td></tr>
+<tr><td>2</td><td>1</td><td><code>u8</code></td><td><code>signature_offset_instruction_index</code> - within the transaction, the index of the transaction whose instruction data contains the signature.</td></tr>
+<tr><td>3</td><td>2</td><td><code>u16</code></td><td><code>eth_address_offset</code> - offset to 20-byte Ethereum address.</td></tr>
+<tr><td>5</td><td>1</td><td><code>u8</code></td><td><code>eth_address_instruction_index</code> - within the transaction, the index of the instruction whose instruction data contains the Ethereum address.</td></tr>
+<tr><td>6</td><td>2</td><td><code>u16</code></td><td><code>message_data_offset</code> - Offset to start of message data.</td></tr>
+<tr><td>8</td><td>2</td><td><code>u16</code></td><td><code>message_data_size</code> - Size of message data in bytes.</td></tr>
+<tr><td>10</td><td>1</td><td><code>u8</code></td><td><code>message_instruction_index</code> - Within the transaction, the index of the instruction whose instruction data contains the message data.</td></tr>
+</tbody></table>
+</div><h2 id="signature-malleability"><a href="#signature-malleability">Signature malleability</a></h2>
+<p>With the ECDSA signature algorithm it is possible for any party, given a
+valid signature of some message, to create a second signature that is
+equally valid. This is known as <em>signature malleability</em>. In many cases this
+is not a concern, but in cases where applications rely on signatures to have
+a unique representation this can be the source of bugs, potentially with
+security implications.</p>
+<p><strong>The solana <code>secp256k1_recover</code> function does not prevent signature
+malleability</strong>. This is in contrast to the Bitcoin secp256k1 library, which
+does prevent malleability by default. Solana accepts signatures with <code>S</code>
+values that are either in the <em>high order</em> or in the <em>low order</em>, and it
+is trivial to produce one from the other.</p>
+<p>For more complete documentation of the subject, and techniques to prevent
+malleability, see the documentation for the <a href="../secp256k1_recover/index.html" title="mod solana_sdk::secp256k1_recover"><code>secp256k1_recover</code></a> syscall.</p>
+<h2 id="additional-security-considerations"><a href="#additional-security-considerations">Additional security considerations</a></h2>
+<p>Most programs will want to be conservative about the layout of the secp256k1 instruction
+to prevent unforeseen bugs. The following checks may be desirable:</p>
+<ul>
+<li>That there are exactly the expected number of signatures.</li>
+<li>That the three indexes, <code>signature_offset_instruction_index</code>,
+<code>eth_address_instruction_index</code>, and <code>message_instruction_index</code> are as
+expected, placing the signature, message and Ethereum address in the
+expected instruction.</li>
+</ul>
+<p>Loading the secp256k1 instruction data within a program requires access to
+the <a href="../sysvar/instructions/index.html" title="mod solana_sdk::sysvar::instructions">instructions sysvar</a>, which must be passed to the program by its
+caller. Programs must verify the ID of this program to avoid calling an
+imposter program. This does not need to be done manually though, as long as
+it is only used through the <a href="../sysvar/instructions/fn.load_instruction_at_checked.html" title="fn solana_sdk::sysvar::instructions::load_instruction_at_checked"><code>load_instruction_at_checked</code></a> or
+<a href="../sysvar/instructions/fn.get_instruction_relative.html" title="fn solana_sdk::sysvar::instructions::get_instruction_relative"><code>get_instruction_relative</code></a> functions. Both of these functions check their
+sysvar argument to ensure it is the known instruction sysvar.</p>
+<p>Programs should <em>always</em> verify that the secp256k1 program ID loaded through
+the instructions sysvar has the same value as in the <a href="../secp256k1_program/index.html" title="mod solana_sdk::secp256k1_program"><code>secp256k1_program</code></a>
+module. Again this prevents imposter programs.</p>
+<h2 id="errors"><a href="#errors">Errors</a></h2>
+<p>The transaction will fail if any of the following are true:</p>
+<ul>
+<li>Any signature was not created by the secret key corresponding to the
+specified public key.</li>
+<li>Any signature is invalid.</li>
+<li>Any signature is “overflowing”, a non-standard condition.</li>
+<li>The instruction data is empty.</li>
+<li>The first byte of instruction data is equal to 0 (indicating no signatures),
+but the instruction data’s length is greater than 1.</li>
+<li>The instruction data is not long enough to hold the number of signature
+offsets specified in the first byte.</li>
+<li>Any instruction indexes specified in the signature offsets are greater or
+equal to the number of instructions in the transaction.</li>
+<li>Any bounds specified in the signature offsets exceed the bounds of the
+instruction data to which they are indexed.</li>
+</ul>
+<h2 id="examples"><a href="#examples">Examples</a></h2>
+<p>Both of the following examples make use of the following module definition
+to parse the secp256k1 instruction data from within a Solana program.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">mod </span>secp256k1_defs {
+    <span class="kw">use </span>solana_program::program_error::ProgramError;
+    <span class="kw">use </span>std::iter::Iterator;
+
+    <span class="kw">pub const </span>HASHED_PUBKEY_SERIALIZED_SIZE: usize = <span class="number">20</span>;
+    <span class="kw">pub const </span>SIGNATURE_SERIALIZED_SIZE: usize = <span class="number">64</span>;
+    <span class="kw">pub const </span>SIGNATURE_OFFSETS_SERIALIZED_SIZE: usize = <span class="number">11</span>;
+
+    <span class="doccomment">/// The structure encoded in the secp2256k1 instruction data.
+    </span><span class="kw">pub struct </span>SecpSignatureOffsets {
+        <span class="kw">pub </span>signature_offset: u16,
+        <span class="kw">pub </span>signature_instruction_index: u8,
+        <span class="kw">pub </span>eth_address_offset: u16,
+        <span class="kw">pub </span>eth_address_instruction_index: u8,
+        <span class="kw">pub </span>message_data_offset: u16,
+        <span class="kw">pub </span>message_data_size: u16,
+        <span class="kw">pub </span>message_instruction_index: u8,
+    }
+
+    <span class="kw">pub fn </span>iter_signature_offsets(
+       secp256k1_instr_data: <span class="kw-2">&amp;</span>[u8],
+    ) -&gt; <span class="prelude-ty">Result</span>&lt;<span class="kw">impl </span>Iterator&lt;Item = SecpSignatureOffsets&gt; + <span class="lifetime">&#39;_</span>, ProgramError&gt; {
+        <span class="comment">// First element is the number of `SecpSignatureOffsets`.
+        </span><span class="kw">let </span>num_structs = <span class="kw-2">*</span>secp256k1_instr_data
+            .get(<span class="number">0</span>)
+            .ok_or(ProgramError::InvalidArgument)<span class="question-mark">?</span>;
+
+        <span class="kw">let </span>all_structs_size = SIGNATURE_OFFSETS_SERIALIZED_SIZE * num_structs <span class="kw">as </span>usize;
+        <span class="kw">let </span>all_structs_slice = secp256k1_instr_data
+            .get(<span class="number">1</span>..all_structs_size + <span class="number">1</span>)
+            .ok_or(ProgramError::InvalidArgument)<span class="question-mark">?</span>;
+
+        <span class="kw">fn </span>decode_u16(chunk: <span class="kw-2">&amp;</span>[u8], index: usize) -&gt; u16 {
+            u16::from_le_bytes(&lt;[u8; <span class="number">2</span>]&gt;::try_from(<span class="kw-2">&amp;</span>chunk[index..index + <span class="number">2</span>]).unwrap())
+        }
+
+        <span class="prelude-val">Ok</span>(all_structs_slice
+            .chunks(SIGNATURE_OFFSETS_SERIALIZED_SIZE)
+            .map(|chunk| SecpSignatureOffsets {
+                signature_offset: decode_u16(chunk, <span class="number">0</span>),
+                signature_instruction_index: chunk[<span class="number">2</span>],
+                eth_address_offset: decode_u16(chunk, <span class="number">3</span>),
+                eth_address_instruction_index: chunk[<span class="number">5</span>],
+                message_data_offset: decode_u16(chunk, <span class="number">6</span>),
+                message_data_size: decode_u16(chunk, <span class="number">8</span>),
+                message_instruction_index: chunk[<span class="number">10</span>],
+            }))
+    }
+}</code></pre></div>
+<h3 id="example-signing-and-verifying-with-new_secp256k1_instruction"><a href="#example-signing-and-verifying-with-new_secp256k1_instruction">Example: Signing and verifying with <code>new_secp256k1_instruction</code></a></h3>
+<p>This example demonstrates the simplest way to use the secp256k1 program, by
+calling <a href="fn.new_secp256k1_instruction.html" title="fn solana_sdk::secp256k1_instruction::new_secp256k1_instruction"><code>new_secp256k1_instruction</code></a> to sign a single message and build the
+corresponding secp256k1 instruction.</p>
+<p>This example has two components: a Solana program, and an RPC client that
+sends a transaction to call it. The RPC client will sign a single message,
+and the Solana program will introspect the secp256k1 instruction to verify
+that the signer matches a known authorized public key.</p>
+<p>The Solana program. Note that it uses <code>libsecp256k1</code> version 0.7.0 to parse
+the secp256k1 signature to prevent malleability.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>solana_program::{
+    account_info::{next_account_info, AccountInfo},
+    entrypoint::ProgramResult,
+    msg,
+    program_error::ProgramError,
+    secp256k1_program,
+    sysvar,
+};
+
+<span class="doccomment">/// An Ethereum address corresponding to a secp256k1 secret key that is
+/// authorized to sign our messages.
+</span><span class="kw">const </span>AUTHORIZED_ETH_ADDRESS: [u8; <span class="number">20</span>] = [
+    <span class="number">0x18</span>, <span class="number">0x8a</span>, <span class="number">0x5c</span>, <span class="number">0xf2</span>, <span class="number">0x3b</span>, <span class="number">0x0e</span>, <span class="number">0xff</span>, <span class="number">0xe9</span>, <span class="number">0xa8</span>, <span class="number">0xe1</span>, <span class="number">0x42</span>, <span class="number">0x64</span>, <span class="number">0x5b</span>, <span class="number">0x82</span>, <span class="number">0x2f</span>, <span class="number">0x3a</span>,
+    <span class="number">0x6b</span>, <span class="number">0x8b</span>, <span class="number">0x52</span>, <span class="number">0x35</span>,
+];
+
+<span class="doccomment">/// Check the secp256k1 instruction to ensure it was signed by
+/// `AUTHORIZED_ETH_ADDRESS`s key.
+///
+/// `accounts` is the slice of all accounts passed to the program
+/// entrypoint. The only account it should contain is the instructions sysvar.
+</span><span class="kw">fn </span>demo_secp256k1_verify_basic(
+   accounts: <span class="kw-2">&amp;</span>[AccountInfo],
+) -&gt; ProgramResult {
+    <span class="kw">let </span>account_info_iter = <span class="kw-2">&amp;mut </span>accounts.iter();
+
+    <span class="comment">// The instructions sysvar gives access to the instructions in the transaction.
+    </span><span class="kw">let </span>instructions_sysvar_account = next_account_info(account_info_iter)<span class="question-mark">?</span>;
+    <span class="macro">assert!</span>(sysvar::instructions::check_id(
+        instructions_sysvar_account.key
+    ));
+
+    <span class="comment">// Load the secp256k1 instruction.
+    // `new_secp256k1_instruction` generates an instruction that must be at index 0.
+    </span><span class="kw">let </span>secp256k1_instr =
+        sysvar::instructions::load_instruction_at_checked(<span class="number">0</span>, instructions_sysvar_account)<span class="question-mark">?</span>;
+
+    <span class="comment">// Verify it is a secp256k1 instruction.
+    // This is security-critical - what if the transaction uses an imposter secp256k1 program?
+    </span><span class="macro">assert!</span>(secp256k1_program::check_id(<span class="kw-2">&amp;</span>secp256k1_instr.program_id));
+
+    <span class="comment">// There must be at least one byte. This is also verified by the runtime,
+    // and doesn&#39;t strictly need to be checked.
+    </span><span class="macro">assert!</span>(secp256k1_instr.data.len() &gt; <span class="number">1</span>);
+
+    <span class="kw">let </span>num_signatures = secp256k1_instr.data[<span class="number">0</span>];
+    <span class="comment">// `new_secp256k1_instruction` generates an instruction that contains one signature.
+    </span><span class="macro">assert_eq!</span>(<span class="number">1</span>, num_signatures);
+
+    <span class="comment">// Load the first and only set of signature offsets.
+    </span><span class="kw">let </span>offsets: secp256k1_defs::SecpSignatureOffsets =
+        secp256k1_defs::iter_signature_offsets(<span class="kw-2">&amp;</span>secp256k1_instr.data)<span class="question-mark">?
+            </span>.next()
+            .ok_or(ProgramError::InvalidArgument)<span class="question-mark">?</span>;
+
+    <span class="comment">// `new_secp256k1_instruction` generates an instruction that only uses instruction index 0.
+    </span><span class="macro">assert_eq!</span>(<span class="number">0</span>, offsets.signature_instruction_index);
+    <span class="macro">assert_eq!</span>(<span class="number">0</span>, offsets.eth_address_instruction_index);
+    <span class="macro">assert_eq!</span>(<span class="number">0</span>, offsets.message_instruction_index);
+
+    <span class="comment">// Reject high-s value signatures to prevent malleability.
+    // Solana does not do this itself.
+    // This may or may not be necessary depending on use case.
+    </span>{
+        <span class="kw">let </span>signature = <span class="kw-2">&amp;</span>secp256k1_instr.data[offsets.signature_offset <span class="kw">as </span>usize
+            ..offsets.signature_offset <span class="kw">as </span>usize + secp256k1_defs::SIGNATURE_SERIALIZED_SIZE];
+        <span class="kw">let </span>signature = libsecp256k1::Signature::parse_standard_slice(signature)
+            .map_err(|<span class="kw">_</span>| ProgramError::InvalidArgument)<span class="question-mark">?</span>;
+
+        <span class="kw">if </span>signature.s.is_high() {
+            <span class="macro">msg!</span>(<span class="string">&quot;signature with high-s value&quot;</span>);
+            <span class="kw">return </span><span class="prelude-val">Err</span>(ProgramError::InvalidArgument);
+        }
+    }
+
+    <span class="comment">// There is likely at least one more verification step a real program needs
+    // to do here to ensure it trusts the secp256k1 instruction, e.g.:
+    //
+    // - verify the tx signer is authorized
+    // - verify the secp256k1 signer is authorized
+
+    // Here we are checking the secp256k1 pubkey against a known authorized pubkey.
+    </span><span class="kw">let </span>eth_address = <span class="kw-2">&amp;</span>secp256k1_instr.data[offsets.eth_address_offset <span class="kw">as </span>usize
+        ..offsets.eth_address_offset <span class="kw">as </span>usize + secp256k1_defs::HASHED_PUBKEY_SERIALIZED_SIZE];
+
+    <span class="kw">if </span>eth_address != AUTHORIZED_ETH_ADDRESS {
+        <span class="kw">return </span><span class="prelude-val">Err</span>(ProgramError::InvalidArgument);
+    }
+
+    <span class="prelude-val">Ok</span>(())
+}</code></pre></div>
+<p>The client program:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>anyhow::Result;
+<span class="kw">use </span>solana_rpc_client::rpc_client::RpcClient;
+<span class="kw">use </span>solana_sdk::{
+    instruction::{AccountMeta, Instruction},
+    secp256k1_instruction,
+    signature::{Keypair, Signer},
+    sysvar,
+    transaction::Transaction,
+};
+
+<span class="kw">fn </span>demo_secp256k1_verify_basic(
+    payer_keypair: <span class="kw-2">&amp;</span>Keypair,
+    secp256k1_secret_key: <span class="kw-2">&amp;</span>libsecp256k1::SecretKey,
+    client: <span class="kw-2">&amp;</span>RpcClient,
+    program_keypair: <span class="kw-2">&amp;</span>Keypair,
+) -&gt; <span class="prelude-ty">Result</span>&lt;()&gt; {
+    <span class="comment">// Internally to `new_secp256k1_instruction` and
+    // `secp256k_instruction::verify` (the secp256k1 program), this message is
+    // keccak-hashed before signing.
+    </span><span class="kw">let </span>msg = <span class="string">b&quot;hello world&quot;</span>;
+    <span class="kw">let </span>secp256k1_instr = secp256k1_instruction::new_secp256k1_instruction(<span class="kw-2">&amp;</span>secp256k1_secret_key, msg);
+
+    <span class="kw">let </span>program_instr = Instruction::new_with_bytes(
+        program_keypair.pubkey(),
+        <span class="kw-2">&amp;</span>[],
+        <span class="macro">vec!</span>[
+            AccountMeta::new_readonly(sysvar::instructions::ID, <span class="bool-val">false</span>)
+        ],
+    );
+
+    <span class="kw">let </span>blockhash = client.get_latest_blockhash()<span class="question-mark">?</span>;
+    <span class="kw">let </span>tx = Transaction::new_signed_with_payer(
+        <span class="kw-2">&amp;</span>[secp256k1_instr, program_instr],
+        <span class="prelude-val">Some</span>(<span class="kw-2">&amp;</span>payer_keypair.pubkey()),
+        <span class="kw-2">&amp;</span>[payer_keypair],
+        blockhash,
+    );
+
+    client.send_and_confirm_transaction(<span class="kw-2">&amp;</span>tx)<span class="question-mark">?</span>;
+
+    <span class="prelude-val">Ok</span>(())
+}</code></pre></div>
+<h3 id="example-verifying-multiple-signatures-in-one-instruction"><a href="#example-verifying-multiple-signatures-in-one-instruction">Example: Verifying multiple signatures in one instruction</a></h3>
+<p>This examples demonstrates manually creating a secp256k1 instruction
+containing many signatures, and a Solana program that parses them all. This
+example on its own has no practical purpose. It simply demonstrates advanced
+use of the secp256k1 program.</p>
+<p>Recall that the secp256k1 program will accept signatures, messages, and
+Ethereum addresses that reside in any instruction contained in the same
+transaction. In the <em>previous</em> example, the Solana program asserted that all
+signatures, messages, and addresses were stored in the instruction at 0. In
+this next example the Solana program supports signatures, messages, and
+addresses stored in any instruction. For simplicity the client still only
+stores signatures, messages, and addresses in a single instruction, the
+secp256k1 instruction. The code for storing this data across multiple
+instructions would be complex, and may not be necessary in practice.</p>
+<p>This example has two components: a Solana program, and an RPC client that
+sends a transaction to call it.</p>
+<p>The Solana program:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>solana_program::{
+    account_info::{next_account_info, AccountInfo},
+    entrypoint::ProgramResult,
+    msg,
+    program_error::ProgramError,
+    secp256k1_program,
+    sysvar,
+};
+
+<span class="doccomment">/// A struct to hold the values specified in the `SecpSignatureOffsets` struct.
+</span><span class="kw">struct </span>SecpSignature {
+    signature: [u8; secp256k1_defs::SIGNATURE_SERIALIZED_SIZE],
+    recovery_id: u8,
+    eth_address: [u8; secp256k1_defs::HASHED_PUBKEY_SERIALIZED_SIZE],
+    message: Vec&lt;u8&gt;,
+}
+
+<span class="doccomment">/// Load all signatures indicated in the secp256k1 instruction.
+///
+/// This function is quite inefficient for reloading the same instructions
+/// repeatedly and making copies and allocations.
+</span><span class="kw">fn </span>load_signatures(
+    secp256k1_instr_data: <span class="kw-2">&amp;</span>[u8],
+    instructions_sysvar_account: <span class="kw-2">&amp;</span>AccountInfo,
+) -&gt; <span class="prelude-ty">Result</span>&lt;Vec&lt;SecpSignature&gt;, ProgramError&gt; {
+    <span class="kw">let </span><span class="kw-2">mut </span>sigs = <span class="macro">vec!</span>[];
+    <span class="kw">for </span>offsets <span class="kw">in </span>secp256k1_defs::iter_signature_offsets(secp256k1_instr_data)<span class="question-mark">? </span>{
+        <span class="kw">let </span>signature_instr = sysvar::instructions::load_instruction_at_checked(
+            offsets.signature_instruction_index <span class="kw">as </span>usize,
+            instructions_sysvar_account,
+        )<span class="question-mark">?</span>;
+        <span class="kw">let </span>eth_address_instr = sysvar::instructions::load_instruction_at_checked(
+            offsets.eth_address_instruction_index <span class="kw">as </span>usize,
+            instructions_sysvar_account,
+        )<span class="question-mark">?</span>;
+        <span class="kw">let </span>message_instr = sysvar::instructions::load_instruction_at_checked(
+            offsets.message_instruction_index <span class="kw">as </span>usize,
+            instructions_sysvar_account,
+        )<span class="question-mark">?</span>;
+
+        <span class="comment">// These indexes must all be valid because the runtime already verified them.
+        </span><span class="kw">let </span>signature = <span class="kw-2">&amp;</span>signature_instr.data[offsets.signature_offset <span class="kw">as </span>usize
+            ..offsets.signature_offset <span class="kw">as </span>usize + secp256k1_defs::SIGNATURE_SERIALIZED_SIZE];
+        <span class="kw">let </span>recovery_id = signature_instr.data
+            [offsets.signature_offset <span class="kw">as </span>usize + secp256k1_defs::SIGNATURE_SERIALIZED_SIZE];
+        <span class="kw">let </span>eth_address = <span class="kw-2">&amp;</span>eth_address_instr.data[offsets.eth_address_offset <span class="kw">as </span>usize
+            ..offsets.eth_address_offset <span class="kw">as </span>usize + secp256k1_defs::HASHED_PUBKEY_SERIALIZED_SIZE];
+        <span class="kw">let </span>message = <span class="kw-2">&amp;</span>message_instr.data[offsets.message_data_offset <span class="kw">as </span>usize
+            ..offsets.message_data_offset <span class="kw">as </span>usize + offsets.message_data_size <span class="kw">as </span>usize];
+
+        <span class="kw">let </span>signature =
+            &lt;[u8; secp256k1_defs::SIGNATURE_SERIALIZED_SIZE]&gt;::try_from(signature).unwrap();
+        <span class="kw">let </span>eth_address =
+            &lt;[u8; secp256k1_defs::HASHED_PUBKEY_SERIALIZED_SIZE]&gt;::try_from(eth_address).unwrap();
+        <span class="kw">let </span>message = Vec::from(message);
+
+        sigs.push(SecpSignature {
+            signature,
+            recovery_id,
+            eth_address,
+            message,
+        })
+    }
+    <span class="prelude-val">Ok</span>(sigs)
+}
+
+<span class="kw">fn </span>demo_secp256k1_custom_many(
+    accounts: <span class="kw-2">&amp;</span>[AccountInfo],
+) -&gt; ProgramResult {
+    <span class="kw">let </span>account_info_iter = <span class="kw-2">&amp;mut </span>accounts.iter();
+
+    <span class="kw">let </span>instructions_sysvar_account = next_account_info(account_info_iter)<span class="question-mark">?</span>;
+    <span class="macro">assert!</span>(sysvar::instructions::check_id(
+        instructions_sysvar_account.key
+    ));
+
+    <span class="kw">let </span>secp256k1_instr =
+        sysvar::instructions::get_instruction_relative(-<span class="number">1</span>, instructions_sysvar_account)<span class="question-mark">?</span>;
+
+    <span class="macro">assert!</span>(secp256k1_program::check_id(<span class="kw-2">&amp;</span>secp256k1_instr.program_id));
+
+    <span class="kw">let </span>signatures = load_signatures(<span class="kw-2">&amp;</span>secp256k1_instr.data, instructions_sysvar_account)<span class="question-mark">?</span>;
+    <span class="kw">for </span>(idx, signature_bundle) <span class="kw">in </span>signatures.iter().enumerate() {
+        <span class="kw">let </span>signature = hex::encode(<span class="kw-2">&amp;</span>signature_bundle.signature);
+        <span class="kw">let </span>eth_address = hex::encode(<span class="kw-2">&amp;</span>signature_bundle.eth_address);
+        <span class="kw">let </span>message = hex::encode(<span class="kw-2">&amp;</span>signature_bundle.message);
+        <span class="macro">msg!</span>(<span class="string">&quot;sig {}: {:?}&quot;</span>, idx, signature);
+        <span class="macro">msg!</span>(<span class="string">&quot;recid: {}: {}&quot;</span>, idx, signature_bundle.recovery_id);
+        <span class="macro">msg!</span>(<span class="string">&quot;eth address {}: {}&quot;</span>, idx, eth_address);
+        <span class="macro">msg!</span>(<span class="string">&quot;message {}: {}&quot;</span>, idx, message);
+    }
+
+    <span class="prelude-val">Ok</span>(())
+}</code></pre></div>
+<p>The client program:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>anyhow::Result;
+<span class="kw">use </span>solana_rpc_client::rpc_client::RpcClient;
+<span class="kw">use </span>solana_sdk::{
+    instruction::{AccountMeta, Instruction},
+    keccak,
+    secp256k1_instruction::{
+        <span class="self">self</span>, SecpSignatureOffsets, HASHED_PUBKEY_SERIALIZED_SIZE,
+        SIGNATURE_OFFSETS_SERIALIZED_SIZE, SIGNATURE_SERIALIZED_SIZE,
+    },
+    signature::{Keypair, Signer},
+    sysvar,
+    transaction::Transaction,
+};
+
+<span class="doccomment">/// A struct to hold the values specified in the `SecpSignatureOffsets` struct.
+</span><span class="kw">struct </span>SecpSignature {
+    signature: [u8; SIGNATURE_SERIALIZED_SIZE],
+    recovery_id: u8,
+    eth_address: [u8; HASHED_PUBKEY_SERIALIZED_SIZE],
+    message: Vec&lt;u8&gt;,
+}
+
+<span class="doccomment">/// Create the instruction data for a secp256k1 instruction.
+///
+/// `instruction_index` is the index the secp256k1 instruction will appear
+/// within the transaction. For simplicity, this function only supports packing
+/// the signatures into the secp256k1 instruction data, and not into any other
+/// instructions within the transaction.
+</span><span class="kw">fn </span>make_secp256k1_instruction_data(
+    signatures: <span class="kw-2">&amp;</span>[SecpSignature],
+    instruction_index: u8,
+) -&gt; <span class="prelude-ty">Result</span>&lt;Vec&lt;u8&gt;&gt; {
+    <span class="macro">assert!</span>(signatures.len() &lt;= u8::max_value().into());
+
+    <span class="comment">// We&#39;re going to pack all the signatures into the secp256k1 instruction data.
+    // Before our signatures though is the signature offset structures
+    // the secp256k1 program parses to find those signatures.
+    // This value represents the byte offset where the signatures begin.
+    </span><span class="kw">let </span>data_start = <span class="number">1 </span>+ signatures.len() * SIGNATURE_OFFSETS_SERIALIZED_SIZE;
+
+    <span class="kw">let </span><span class="kw-2">mut </span>signature_offsets = <span class="macro">vec!</span>[];
+    <span class="kw">let </span><span class="kw-2">mut </span>signature_buffer = <span class="macro">vec!</span>[];
+
+    <span class="kw">for </span>signature_bundle <span class="kw">in </span>signatures {
+        <span class="kw">let </span>data_start = data_start
+            .checked_add(signature_buffer.len())
+            .expect(<span class="string">&quot;overflow&quot;</span>);
+
+        <span class="kw">let </span>signature_offset = data_start;
+        <span class="kw">let </span>eth_address_offset = data_start
+            .checked_add(SIGNATURE_SERIALIZED_SIZE + <span class="number">1</span>)
+            .expect(<span class="string">&quot;overflow&quot;</span>);
+        <span class="kw">let </span>message_data_offset = eth_address_offset
+            .checked_add(HASHED_PUBKEY_SERIALIZED_SIZE)
+            .expect(<span class="string">&quot;overflow&quot;</span>);
+        <span class="kw">let </span>message_data_size = signature_bundle.message.len();
+
+        <span class="kw">let </span>signature_offset = u16::try_from(signature_offset)<span class="question-mark">?</span>;
+        <span class="kw">let </span>eth_address_offset = u16::try_from(eth_address_offset)<span class="question-mark">?</span>;
+        <span class="kw">let </span>message_data_offset = u16::try_from(message_data_offset)<span class="question-mark">?</span>;
+        <span class="kw">let </span>message_data_size = u16::try_from(message_data_size)<span class="question-mark">?</span>;
+
+        signature_offsets.push(SecpSignatureOffsets {
+            signature_offset,
+            signature_instruction_index: instruction_index,
+            eth_address_offset,
+            eth_address_instruction_index: instruction_index,
+            message_data_offset,
+            message_data_size,
+            message_instruction_index: instruction_index,
+        });
+
+        signature_buffer.extend(signature_bundle.signature);
+        signature_buffer.push(signature_bundle.recovery_id);
+        signature_buffer.extend(<span class="kw-2">&amp;</span>signature_bundle.eth_address);
+        signature_buffer.extend(<span class="kw-2">&amp;</span>signature_bundle.message);
+    }
+
+    <span class="kw">let </span><span class="kw-2">mut </span>instr_data = <span class="macro">vec!</span>[];
+    instr_data.push(signatures.len() <span class="kw">as </span>u8);
+
+    <span class="kw">for </span>offsets <span class="kw">in </span>signature_offsets {
+        <span class="kw">let </span>offsets = bincode::serialize(<span class="kw-2">&amp;</span>offsets)<span class="question-mark">?</span>;
+        instr_data.extend(offsets);
+    }
+
+    instr_data.extend(signature_buffer);
+
+    <span class="prelude-val">Ok</span>(instr_data)
+}
+
+<span class="kw">fn </span>demo_secp256k1_custom_many(
+    payer_keypair: <span class="kw-2">&amp;</span>Keypair,
+    client: <span class="kw-2">&amp;</span>RpcClient,
+    program_keypair: <span class="kw-2">&amp;</span>Keypair,
+) -&gt; <span class="prelude-ty">Result</span>&lt;()&gt; {
+    <span class="comment">// Sign some messages.
+    </span><span class="kw">let </span><span class="kw-2">mut </span>signatures = <span class="macro">vec!</span>[];
+    <span class="kw">for </span>idx <span class="kw">in </span><span class="number">0</span>..<span class="number">2 </span>{
+        <span class="kw">let </span>secret_key = libsecp256k1::SecretKey::random(<span class="kw-2">&amp;mut </span>rand::thread_rng());
+        <span class="kw">let </span>message = <span class="macro">format!</span>(<span class="string">&quot;hello world {}&quot;</span>, idx).into_bytes();
+        <span class="kw">let </span>message_hash = {
+            <span class="kw">let </span><span class="kw-2">mut </span>hasher = keccak::Hasher::default();
+            hasher.hash(<span class="kw-2">&amp;</span>message);
+            hasher.result()
+        };
+        <span class="kw">let </span>secp_message = libsecp256k1::Message::parse(<span class="kw-2">&amp;</span>message_hash.<span class="number">0</span>);
+        <span class="kw">let </span>(signature, recovery_id) = libsecp256k1::sign(<span class="kw-2">&amp;</span>secp_message, <span class="kw-2">&amp;</span>secret_key);
+        <span class="kw">let </span>signature = signature.serialize();
+        <span class="kw">let </span>recovery_id = recovery_id.serialize();
+
+        <span class="kw">let </span>public_key = libsecp256k1::PublicKey::from_secret_key(<span class="kw-2">&amp;</span>secret_key);
+        <span class="kw">let </span>eth_address = secp256k1_instruction::construct_eth_pubkey(<span class="kw-2">&amp;</span>public_key);
+
+        signatures.push(SecpSignature {
+            signature,
+            recovery_id,
+            eth_address,
+            message,
+        });
+    }
+
+    <span class="kw">let </span>secp256k1_instr_data = make_secp256k1_instruction_data(<span class="kw-2">&amp;</span>signatures, <span class="number">0</span>)<span class="question-mark">?</span>;
+    <span class="kw">let </span>secp256k1_instr = Instruction::new_with_bytes(
+        solana_sdk::secp256k1_program::ID,
+        <span class="kw-2">&amp;</span>secp256k1_instr_data,
+        <span class="macro">vec!</span>[],
+    );
+
+    <span class="kw">let </span>program_instr = Instruction::new_with_bytes(
+        program_keypair.pubkey(),
+        <span class="kw-2">&amp;</span>[],
+        <span class="macro">vec!</span>[
+            AccountMeta::new_readonly(sysvar::instructions::ID, <span class="bool-val">false</span>)
+        ],
+    );
+
+    <span class="kw">let </span>blockhash = client.get_latest_blockhash()<span class="question-mark">?</span>;
+    <span class="kw">let </span>tx = Transaction::new_signed_with_payer(
+        <span class="kw-2">&amp;</span>[secp256k1_instr, program_instr],
+        <span class="prelude-val">Some</span>(<span class="kw-2">&amp;</span>payer_keypair.pubkey()),
+        <span class="kw-2">&amp;</span>[payer_keypair],
+        blockhash,
+    );
+
+    client.send_and_confirm_transaction(<span class="kw-2">&amp;</span>tx)<span class="question-mark">?</span>;
+
+    <span class="prelude-val">Ok</span>(())
+}</code></pre></div>
+</div></details><h2 id="structs" class="small-section-header"><a href="#structs">Structs</a></h2><ul class="item-table"><li><div class="item-name"><a class="struct" href="struct.SecpSignatureOffsets.html" title="struct solana_sdk::secp256k1_instruction::SecpSignatureOffsets">SecpSignatureOffsets</a></div><div class="desc docblock-short">Offsets of signature data within a secp256k1 instruction.</div></li><li><div class="item-name"><a class="struct" href="struct.__FieldVisitor.html" title="struct solana_sdk::secp256k1_instruction::__FieldVisitor">__FieldVisitor</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li><li><div class="item-name"><a class="struct" href="struct.__Visitor.html" title="struct solana_sdk::secp256k1_instruction::__Visitor">__Visitor</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li></ul><h2 id="enums" class="small-section-header"><a href="#enums">Enums</a></h2><ul class="item-table"><li><div class="item-name"><a class="enum" href="enum.__Field.html" title="enum solana_sdk::secp256k1_instruction::__Field">__Field</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li></ul><h2 id="constants" class="small-section-header"><a href="#constants">Constants</a></h2><ul class="item-table"><li><div class="item-name"><a class="constant" href="constant.DATA_START.html" title="constant solana_sdk::secp256k1_instruction::DATA_START">DATA_START</a></div></li><li><div class="item-name"><a class="constant" href="constant.FIELDS.html" title="constant solana_sdk::secp256k1_instruction::FIELDS">FIELDS</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li><li><div class="item-name"><a class="constant" href="constant.HASHED_PUBKEY_SERIALIZED_SIZE.html" title="constant solana_sdk::secp256k1_instruction::HASHED_PUBKEY_SERIALIZED_SIZE">HASHED_PUBKEY_SERIALIZED_SIZE</a></div></li><li><div class="item-name"><a class="constant" href="constant.SIGNATURE_OFFSETS_SERIALIZED_SIZE.html" title="constant solana_sdk::secp256k1_instruction::SIGNATURE_OFFSETS_SERIALIZED_SIZE">SIGNATURE_OFFSETS_SERIALIZED_SIZE</a></div></li><li><div class="item-name"><a class="constant" href="constant.SIGNATURE_SERIALIZED_SIZE.html" title="constant solana_sdk::secp256k1_instruction::SIGNATURE_SERIALIZED_SIZE">SIGNATURE_SERIALIZED_SIZE</a></div></li></ul><h2 id="functions" class="small-section-header"><a href="#functions">Functions</a></h2><ul class="item-table"><li><div class="item-name"><a class="fn" href="fn.construct_eth_pubkey.html" title="fn solana_sdk::secp256k1_instruction::construct_eth_pubkey">construct_eth_pubkey</a></div><div class="desc docblock-short">Creates an Ethereum address from a secp256k1 public key.</div></li><li><div class="item-name"><a class="fn" href="fn.get_data_slice.html" title="fn solana_sdk::secp256k1_instruction::get_data_slice">get_data_slice</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li><li><div class="item-name"><a class="fn" href="fn.new_secp256k1_instruction.html" title="fn solana_sdk::secp256k1_instruction::new_secp256k1_instruction">new_secp256k1_instruction</a></div><div class="desc docblock-short">Sign a message and create a secp256k1 program instruction to verify the signature.</div></li><li><div class="item-name"><a class="fn" href="fn.verify.html" title="fn solana_sdk::secp256k1_instruction::verify">verify</a></div><div class="desc docblock-short">Verifies the signatures specified in the secp256k1 instruction data.</div></li></ul></section></div></main></body></html>

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["CellData","Error"],"fn":["deserialize_bincode_cell_data","deserialize_protobuf_cell_data","deserialize_protobuf_or_bincode_cell_data"],"mod":["google"],"struct":["BigTable","BigTableConnection"],"type":["CellName","CellValue","InterceptedRequestResult","Result","RowData","RowDataSlice","RowKey"]};

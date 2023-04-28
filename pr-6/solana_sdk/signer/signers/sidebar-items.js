@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"macro":["default_keypairs_impl"],"trait":["Signers"]};

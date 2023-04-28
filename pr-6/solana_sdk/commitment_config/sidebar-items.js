@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","VARIANTS"],"enum":["CommitmentLevel","ParseCommitmentLevelError","__Field"],"struct":["CommitmentConfig","__FieldVisitor","__Visitor"]};

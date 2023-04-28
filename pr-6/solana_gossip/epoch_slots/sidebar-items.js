@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","MAX_SLOTS_PER_ENTRY","VARIANTS"],"enum":["CompressedSlots","Error","__Field"],"struct":["EpochSlots","Flate2","Uncompressed","__FieldVisitor","__Visitor"],"type":["Result"]};

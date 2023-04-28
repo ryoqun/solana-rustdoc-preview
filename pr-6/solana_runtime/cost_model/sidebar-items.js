@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MAX_WRITABLE_ACCOUNTS"],"struct":["CostModel","TransactionCost"]};
