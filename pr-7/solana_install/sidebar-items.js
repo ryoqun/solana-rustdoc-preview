@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["explicit_release_of","handle_init","is_explicit_release","is_release_channel","is_semver","main","main_init"],"mod":["build_env","command","config","defaults","stop_process","update_manifest"]};

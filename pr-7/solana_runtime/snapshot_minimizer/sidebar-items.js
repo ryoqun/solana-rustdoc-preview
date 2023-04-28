@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["CHUNK_SIZE"],"struct":["SnapshotMinimizer"]};

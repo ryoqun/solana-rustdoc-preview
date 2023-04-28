@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAXIMUM_APPEND_VEC_FILE_SIZE","STORE_META_OVERHEAD"],"enum":["MatchAccountOwnerError"],"fn":["__stability","__static_ref_initialize","aligned_stored_size"],"mod":["test_utils"],"static":["INC_NEW_COUNTER","INIT_HOOK"],"struct":["APPEND_VEC_MMAPPED_FILES_OPEN","AppendVec","AppendVecAccountsIter","AppendVecStoredAccountMeta"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["DEFAULT_CAPACITY_POW2","PAGE_SIZE"],"enum":["BucketStorageError","Capacity","IncludeHeader"],"struct":["BucketStorage"],"trait":["BucketCapacity","BucketOccupied"]};

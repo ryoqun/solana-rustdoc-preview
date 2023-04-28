@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["gen_client","rpc_impl_BankData"],"struct":["BankDataClient","BankDataImpl"],"trait":["BankData"]};

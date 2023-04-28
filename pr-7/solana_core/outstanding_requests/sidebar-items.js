@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["DEFAULT_REQUEST_EXPIRATION_MS"],"struct":["OutstandingRequests","RequestStatus"]};

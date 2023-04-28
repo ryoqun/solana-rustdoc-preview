@@ -1,3 +1,0 @@
-(function() {var implementors = {
-"solana_runtime":[["impl <a class=\"trait\" href=\"solana_program_runtime/loaded_programs/trait.ForkGraph.html\" title=\"trait solana_program_runtime::loaded_programs::ForkGraph\">ForkGraph</a> for <a class=\"struct\" href=\"solana_runtime/bank_forks/struct.BankForks.html\" title=\"struct solana_runtime::bank_forks::BankForks\">BankForks</a>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

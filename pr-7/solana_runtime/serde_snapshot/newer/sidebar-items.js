@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"struct":["Context","DeserializableVersionedBank","SerializableVersionedBank","UnusedAccounts","__FieldVisitor","__SerializeWith","__Visitor"],"type":["AccountsDbFields"]};

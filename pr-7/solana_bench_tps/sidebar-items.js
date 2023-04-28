@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["bench","bench_tps_client","cli","keypairs","perf_utils","send_batch","spl_convert"]};

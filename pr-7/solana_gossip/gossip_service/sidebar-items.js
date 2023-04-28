@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["discover","discover_cluster","get_client","get_multi_client","make_gossip_node","spy"],"struct":["GossipService"]};

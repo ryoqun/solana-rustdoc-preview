@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["http_sender","mock_sender","mock_sender_for_cli","nonblocking","rpc_client","rpc_sender","spinner"]};

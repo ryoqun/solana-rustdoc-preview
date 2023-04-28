@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["BRANCHES"],"enum":["PubsubClientError"],"mod":["util"],"struct":["PubsubClient"],"type":["PubsubClientResult","RequestMsg","SubscribeRequestMsg","SubscribeResponseMsg","SubscribeResult","UnsubscribeFn"]};

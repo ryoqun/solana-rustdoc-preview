@@ -1,5 +1,0 @@
-(function() {var implementors = {
-"solana_client":[["impl AsyncClient for <a class=\"enum\" href=\"solana_client/thin_client/enum.ThinClient.html\" title=\"enum solana_client::thin_client::ThinClient\">ThinClient</a>"]],
-"solana_runtime":[["impl <a class=\"trait\" href=\"solana_sdk/client/trait.AsyncClient.html\" title=\"trait solana_sdk::client::AsyncClient\">AsyncClient</a> for <a class=\"struct\" href=\"solana_runtime/bank_client/struct.BankClient.html\" title=\"struct solana_runtime::bank_client::BankClient\">BankClient</a>"]],
-"solana_thin_client":[["impl&lt;P, M, C&gt; AsyncClient for <a class=\"struct\" href=\"solana_thin_client/thin_client/struct.ThinClient.html\" title=\"struct solana_thin_client::thin_client::ThinClient\">ThinClient</a>&lt;P, M, C&gt;<span class=\"where fmt-newline\">where\n    P: ConnectionPool&lt;NewConnectionConfig = C&gt;,\n    M: ConnectionManager&lt;ConnectionPool = P, NewConnectionConfig = C&gt;,\n    C: NewConnectionConfig,</span>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

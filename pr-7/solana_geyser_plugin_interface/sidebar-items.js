@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["geyser_plugin_interface"]};

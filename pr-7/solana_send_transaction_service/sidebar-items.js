@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["send_transaction_service","tpu_info"]};

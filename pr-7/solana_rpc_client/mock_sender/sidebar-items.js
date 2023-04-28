@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["PUBKEY"],"struct":["MockSender"],"type":["Mocks"]};

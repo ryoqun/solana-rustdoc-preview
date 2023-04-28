@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"attr":["frozen_abi"],"derive":["AbiEnumVisitor","AbiExample"],"fn":["derive_abi_sample_enum_type","derive_abi_sample_struct_type","do_derive_abi_enum_visitor","filter_allow_attrs","filter_serde_attrs","frozen_abi_enum_type","frozen_abi_struct_type","frozen_abi_type_alias","quote_for_test","quote_sample_variant","test_mod_name"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["get_closest_completion","get_unknown_last_index","get_unrepaired_path"],"struct":["GenericTraversal"]};

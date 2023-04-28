@@ -1,3 +1,0 @@
-(function() {var implementors = {
-"solana_geyser_plugin_manager":[["impl EntryNotifier for <a class=\"struct\" href=\"solana_geyser_plugin_manager/entry_notifier/struct.EntryNotifierImpl.html\" title=\"struct solana_geyser_plugin_manager::entry_notifier::EntryNotifierImpl\">EntryNotifierImpl</a>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["SECONDS_PER_YEAR"],"fn":["duration_as_ms","duration_as_ns","duration_as_s","duration_as_us","slot_duration_from_slots_per_year","timestamp","years_as_slots"],"struct":["AtomicInterval"]};

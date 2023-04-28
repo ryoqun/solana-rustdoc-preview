@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS","PACKET_DATA_SIZE"],"enum":["__Field"],"struct":["Meta","Packet","PacketFlags","__DeserializeWith","__FieldVisitor","__SerializeWith","__Visitor"],"trait":["__BitFlags"]};

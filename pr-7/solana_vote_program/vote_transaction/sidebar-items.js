@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["new_compact_vote_state_update_transaction","new_vote_state_update_transaction","new_vote_transaction"]};

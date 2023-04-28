@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["SettingType"],"fn":["load_config_file","save_config_file"],"mod":["config","config_input"],"struct":["CONFIG_FILE","Config","ConfigInput"]};

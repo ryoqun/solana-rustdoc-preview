@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["parse_default_account_state_instruction"]};

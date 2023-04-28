@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["generated","tx_by_addr"]};

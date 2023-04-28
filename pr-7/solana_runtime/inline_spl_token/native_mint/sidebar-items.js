@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["ACCOUNT_DATA","ID"],"fn":["check_id","id"]};

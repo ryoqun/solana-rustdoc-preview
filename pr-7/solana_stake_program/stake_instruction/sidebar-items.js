@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["get_optional_pubkey","process_instruction"]};

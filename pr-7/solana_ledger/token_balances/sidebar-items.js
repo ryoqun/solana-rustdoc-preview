@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["collect_token_balance_from_account","collect_token_balances","get_mint_decimals"],"struct":["TokenBalanceData"]};

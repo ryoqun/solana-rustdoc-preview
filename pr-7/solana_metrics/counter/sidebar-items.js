@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["DEFAULT_LOG_RATE","DEFAULT_METRICS_RATE"],"struct":["Counter","CounterPoint"]};

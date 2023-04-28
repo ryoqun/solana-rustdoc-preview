@@ -1,3 +1,0 @@
-(function() {var implementors = {
-"solana_ledger":[["impl&lt;C: <a class=\"trait\" href=\"solana_ledger/blockstore_db/trait.Column.html\" title=\"trait solana_ledger::blockstore_db::Column\">Column</a> + <a class=\"trait\" href=\"solana_ledger/blockstore_db/trait.ColumnName.html\" title=\"trait solana_ledger::blockstore_db::ColumnName\">ColumnName</a>&gt; CompactionFilter for <a class=\"struct\" href=\"solana_ledger/blockstore_db/struct.PurgedSlotFilter.html\" title=\"struct solana_ledger::blockstore_db::PurgedSlotFilter\">PurgedSlotFilter</a>&lt;C&gt;"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

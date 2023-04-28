@@ -1,3 +1,0 @@
-(function() {var implementors = {
-"solana_quic_client":[["impl ServerCertVerifier for <a class=\"struct\" href=\"solana_quic_client/nonblocking/quic_client/struct.SkipServerVerification.html\" title=\"struct solana_quic_client::nonblocking::quic_client::SkipServerVerification\">SkipServerVerification</a>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["INTERMEDIATE_PREFIX","LEAF_PREFIX"],"macro":["hash_intermediate","hash_leaf"],"struct":["MerkleTree","Proof","ProofEntry"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_NUM_TRANSACTIONS_PER_BATCH"],"static":["INC_NEW_COUNTER","INIT_HOOK"],"struct":["Consumer","ExecuteAndCommitTransactionsOutput","ProcessTransactionBatchOutput"]};

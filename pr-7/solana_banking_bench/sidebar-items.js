@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["TRANSFER_TRANSACTION_COST"],"enum":["WriteLockContention"],"fn":["check_txs","is_simulated_mint_transaction","main","make_accounts_txs","make_transfer_transaction_with_compute_unit_price"],"struct":["PacketsPerIteration"]};

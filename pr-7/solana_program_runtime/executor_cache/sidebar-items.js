@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_CACHED_EXECUTORS","PRIMER_COUNT_TARGET_PERCENTILE"],"struct":["BankExecutorCache","BankExecutorCacheEntry","Stats","TransactionExecutorCache"]};

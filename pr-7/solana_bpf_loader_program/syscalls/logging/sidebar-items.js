@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["SyscallLog","SyscallLogBpfComputeUnits","SyscallLogData","SyscallLogPubkey","SyscallLogU64"]};

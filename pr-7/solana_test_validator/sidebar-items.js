@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_PORT_RANGE","MAX_TRIES","MIN_PORT_RANGE"],"struct":["AccountInfo","ProgramInfo","TestValidator","TestValidatorGenesis","TestValidatorNodeConfig","UpgradeableProgramInfo"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["KeyType"],"fn":["__stability","__static_ref_initialize","extract_and_fmt_memo_data","extract_and_fmt_memos","extract_memos_inner","spl_memo_id_v1","spl_memo_id_v3"],"struct":["MEMO_PROGRAM_ID_V1","MEMO_PROGRAM_ID_V3"],"trait":["ExtractMemos"]};

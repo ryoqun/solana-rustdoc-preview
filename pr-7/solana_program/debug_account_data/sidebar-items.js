@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_DEBUG_ACCOUNT_DATA"],"fn":["debug_account_data"],"struct":["Hex"]};

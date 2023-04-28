@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["snapshot_gossip_manager"],"struct":["SnapshotPackagerService"]};

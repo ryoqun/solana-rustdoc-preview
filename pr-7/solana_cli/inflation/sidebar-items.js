@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["InflationCliCommand"],"fn":["parse_inflation_subcommand","process_inflation_subcommand","process_rewards","process_show"],"trait":["InflationSubCommands"]};

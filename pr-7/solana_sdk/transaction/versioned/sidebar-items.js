@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS","VARIANTS"],"enum":["Legacy","TransactionVersion","__Field"],"mod":["sanitized"],"struct":["VersionedTransaction","__DeserializeWith","__FieldVisitor","__SerializeWith","__Visitor"]};

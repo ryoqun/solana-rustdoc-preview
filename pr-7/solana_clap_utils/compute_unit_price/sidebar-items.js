@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["COMPUTE_UNIT_PRICE_ARG"],"fn":["compute_unit_price_arg"]};

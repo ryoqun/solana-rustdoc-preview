@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["HASH_BYTES"],"struct":["Hash","Hasher"]};

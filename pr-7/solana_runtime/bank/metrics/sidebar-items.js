@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["report_new_bank_metrics","report_new_epoch_metrics"],"struct":["NewBankTimings","NewEpochTimings","RewardsMetrics"]};

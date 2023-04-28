@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS","NUM_PACKETS","NUM_RCVMMSGS","PACKETS_PER_BATCH","PACKET_DATA_SIZE"],"enum":["__Field"],"fn":["deserialize_from_with_limit","to_packet_batches"],"struct":["Meta","Packet","PacketBatch","PacketFlags","__FieldVisitor","__Visitor"],"type":["PacketBatchRecycler"]};

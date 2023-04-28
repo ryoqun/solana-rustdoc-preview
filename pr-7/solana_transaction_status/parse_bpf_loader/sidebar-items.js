@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["check_num_bpf_loader_accounts","check_num_bpf_upgradeable_loader_accounts","parse_bpf_loader","parse_bpf_upgradeable_loader"]};

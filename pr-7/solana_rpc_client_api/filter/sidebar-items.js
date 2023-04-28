@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS","MAX_DATA_BASE58_SIZE","MAX_DATA_BASE64_SIZE","MAX_DATA_SIZE","VARIANTS"],"enum":["DataType","MemcmpEncodedBytes","MemcmpEncoding","RpcFilterError","RpcFilterType","RpcMemcmpEncoding","__Field"],"fn":["maybe_map_filters"],"struct":["Memcmp","RpcMemcmp","__FieldVisitor","__Visitor"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["__stability","__static_ref_initialize","replace_logger","setup","setup_file_with_default","setup_with","setup_with_default"],"struct":["LOGGER","LoggerShim"]};

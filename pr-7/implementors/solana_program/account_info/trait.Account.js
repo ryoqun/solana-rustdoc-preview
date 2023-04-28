@@ -1,3 +1,0 @@
-(function() {var implementors = {
-"solana_sdk":[["impl <a class=\"trait\" href=\"solana_sdk/account_info/trait.Account.html\" title=\"trait solana_sdk::account_info::Account\">Account</a> for <a class=\"struct\" href=\"solana_sdk/account/struct.Account.html\" title=\"struct solana_sdk::account::Account\">Account</a>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

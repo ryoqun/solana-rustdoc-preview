@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["check_sysvar_account","clock","recent_blockhashes","rent","slot_hashes","stake_history"]};

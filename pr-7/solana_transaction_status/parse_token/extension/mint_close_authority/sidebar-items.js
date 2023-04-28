@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["parse_initialize_mint_close_authority_instruction"]};

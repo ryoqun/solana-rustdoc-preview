@@ -1,3 +1,0 @@
-(function() {var implementors = {
-"solana_banks_interface":[["impl&lt;S: <a class=\"trait\" href=\"solana_banks_interface/trait.Banks.html\" title=\"trait solana_banks_interface::Banks\">Banks</a>&gt; <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/future/future/trait.Future.html\" title=\"trait core::future::future::Future\">Future</a> for <a class=\"enum\" href=\"solana_banks_interface/enum.BanksResponseFut.html\" title=\"enum solana_banks_interface::BanksResponseFut\">BanksResponseFut</a>&lt;S&gt;"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

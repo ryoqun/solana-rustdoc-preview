@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MANUFACTURER_LEDGER","MANUFACTURER_UNKNOWN"],"enum":["LocatorError","Manufacturer"],"struct":["Locator","ManufacturerError"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["DUMMY_SNAPSHOT_CONFIG_PATH_MARKER"],"struct":["ClusterConfig","LocalCluster"]};

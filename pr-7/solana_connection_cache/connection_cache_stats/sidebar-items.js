@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["CONNECTION_STAT_SUBMISSION_INTERVAL"],"struct":["ConnectionCacheStats"]};

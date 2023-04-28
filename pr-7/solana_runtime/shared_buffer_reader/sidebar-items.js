@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["CHUNK_SIZE_DEFAULT","TOTAL_BUFFER_BUDGET_DEFAULT"],"struct":["SharedBuffer","SharedBufferBgReader","SharedBufferInternal","SharedBufferReader"],"type":["OneSharedBuffer"]};

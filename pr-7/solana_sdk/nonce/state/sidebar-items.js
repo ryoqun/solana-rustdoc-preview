@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["AuthorizeNonceError","State","Versions"],"struct":["Data","DurableNonce"]};

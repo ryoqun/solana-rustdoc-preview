@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["MetricsCommand"],"fn":["__stability","__static_ref_initialize","flush","get_metrics_config","get_singleton_agent","query","serialize_points","set_host_id","set_panic_hook","submit","submit_counter"],"mod":["test_mocks"],"struct":["HOST_ID","InfluxDbMetricsWriter","MetricsAgent","MetricsConfig"],"trait":["MetricsWriter"],"type":["CounterMap"]};

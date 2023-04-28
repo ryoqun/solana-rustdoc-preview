@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["find_and_send_votes","setup_bank_and_vote_pubkeys_for_tests"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS","VARIANTS"],"enum":["CompressionType","__Field"],"struct":["EpochIncompleteSlots","__FieldVisitor","__Visitor"]};

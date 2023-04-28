@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS","VOTE_THRESHOLD_SIZE"],"enum":["__Field"],"struct":["BlockCommitment","BlockCommitmentCache","CommitmentSlots","__FieldVisitor","__Visitor"],"type":["BlockCommitmentArray"]};

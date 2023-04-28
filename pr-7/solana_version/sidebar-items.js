@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["ClientId","__Field"],"fn":["compute_commit"],"macro":["semver","version"],"mod":["legacy"],"struct":["LegacyVersion1","LegacyVersion2","Version","__DeserializeWith","__FieldVisitor","__SerializeWith","__Visitor"]};

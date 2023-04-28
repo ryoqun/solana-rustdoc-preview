@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["acceptable_reference_epoch_credits","eligible_for_deactivate_delinquent","get_minimum_delegation"]};

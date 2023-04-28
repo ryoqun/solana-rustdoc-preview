@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["ActiveStatItem"],"struct":["ActiveStatGuard","ActiveStats"]};

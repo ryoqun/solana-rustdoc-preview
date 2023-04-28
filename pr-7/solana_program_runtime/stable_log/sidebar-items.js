@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["program_data","program_failure","program_invoke","program_log","program_return","program_success"]};

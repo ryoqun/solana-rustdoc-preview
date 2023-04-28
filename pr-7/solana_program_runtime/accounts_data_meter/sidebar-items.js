@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_ACCOUNTS_DATA_LEN"],"fn":["saturating_add_signed"],"struct":["AccountsDataMeter"]};

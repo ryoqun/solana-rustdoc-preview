@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["INTERVAL_MS","MAX_BYTES_BUDGET","MAX_BYTES_PER_INTERVAL","MAX_BYTES_PER_SECOND"],"static":["INC_NEW_COUNTER","INIT_HOOK"],"struct":["Forwarder"]};

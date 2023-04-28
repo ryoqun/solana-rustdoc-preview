@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"struct":["EpochStakes","NodeVoteAccounts","__DeserializeWith","__FieldVisitor","__SerializeWith","__Visitor"],"type":["EpochAuthorizedVoters","NodeIdToVoteAccounts"]};

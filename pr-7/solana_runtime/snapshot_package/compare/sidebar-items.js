@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["cmp_accounts_package_types_by_priority","cmp_accounts_packages_by_priority","cmp_snapshot_packages_by_priority","cmp_snapshot_types_by_priority"]};

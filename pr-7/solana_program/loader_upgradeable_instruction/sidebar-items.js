@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS","VARIANTS"],"enum":["UpgradeableLoaderInstruction","__Field"],"struct":["__DeserializeWith","__FieldVisitor","__SerializeWith","__Visitor"]};

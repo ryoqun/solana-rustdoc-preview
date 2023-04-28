@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["CompletedDataSetsService"],"type":["CompletedDataSetsReceiver","CompletedDataSetsSender"]};

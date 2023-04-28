@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["LAMPORTS_PER_SOL"],"fn":["lamports_to_sol","sol_to_lamports"],"struct":["Sol"]};

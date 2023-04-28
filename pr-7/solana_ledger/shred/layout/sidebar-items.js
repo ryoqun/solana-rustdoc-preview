@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["get_index","get_merkle_root","get_parent_offset","get_reference_tick","get_shred","get_shred_id","get_shred_size","get_shred_type","get_shred_variant","get_signature","get_signature_range","get_signed_data","get_signed_data_offsets","get_slot","get_version"]};

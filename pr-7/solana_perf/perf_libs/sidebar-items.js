@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["api","append_to_ld_library_path","find_cuda_home","init","init_cuda","locate_perf_libs"],"static":["API"],"struct":["Api","Elems"]};

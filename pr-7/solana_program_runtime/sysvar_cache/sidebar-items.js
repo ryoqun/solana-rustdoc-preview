@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["get_sysvar_with_account_check"],"struct":["SysvarCache"]};

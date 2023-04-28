@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["check_num_vote_accounts","parse_vote"]};

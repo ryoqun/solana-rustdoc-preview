@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_ALLOWABLE_DRIFT_PERCENTAGE_FAST","MAX_ALLOWABLE_DRIFT_PERCENTAGE_SLOW_V2","_MAX_ALLOWABLE_DRIFT_PERCENTAGE","_MAX_ALLOWABLE_DRIFT_PERCENTAGE_SLOW"],"fn":["calculate_stake_weighted_timestamp"],"struct":["MaxAllowableDrift"]};

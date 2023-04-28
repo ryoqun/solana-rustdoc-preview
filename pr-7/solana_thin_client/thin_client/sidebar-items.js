@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["min_index"],"struct":["ClientOptimizer","ThinClient"]};

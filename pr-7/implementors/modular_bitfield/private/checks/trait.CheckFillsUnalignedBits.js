@@ -1,4 +1,0 @@
-(function() {var implementors = {
-"solana_bucket_map":[["impl CheckFillsUnalignedBits for <a class=\"struct\" href=\"solana_bucket_map/index_entry/struct.PackedRefCount.html\" title=\"struct solana_bucket_map::index_entry::PackedRefCount\">PackedRefCount</a>"],["impl CheckFillsUnalignedBits for <a class=\"struct\" href=\"solana_bucket_map/index_entry/struct.PackedStorage.html\" title=\"struct solana_bucket_map::index_entry::PackedStorage\">PackedStorage</a>"]],
-"solana_runtime":[["impl CheckFillsUnalignedBits for <a class=\"struct\" href=\"solana_runtime/account_info/struct.PackedOffsetAndFlags.html\" title=\"struct solana_runtime::account_info::PackedOffsetAndFlags\">PackedOffsetAndFlags</a>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

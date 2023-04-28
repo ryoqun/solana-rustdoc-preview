@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["TpuSenderError"],"fn":["maybe_fetch_cache_info","send_wire_transaction_batch_to_addr","send_wire_transaction_to_addr","set_message_for_confirmed_transactions"],"struct":["LeaderTpuCache","LeaderTpuCacheUpdateInfo","LeaderTpuService","TpuClient"]};

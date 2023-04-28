@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["StoredAccountMeta","__Field"],"struct":["AccountMeta","StorableAccountsWithHashesAndWriteVersions","StoredAccountInfo","StoredMeta","__FieldVisitor","__Visitor"],"type":["StoredMetaWriteVersion"]};

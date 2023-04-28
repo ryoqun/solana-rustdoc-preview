@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"fn":["is_zeroed"],"struct":["BorrowedAccount","ExecutionRecord","InstructionAccount","InstructionContext","TransactionContext","TransactionReturnData","__FieldVisitor","__Visitor"],"type":["IndexOfAccount","TransactionAccount"]};

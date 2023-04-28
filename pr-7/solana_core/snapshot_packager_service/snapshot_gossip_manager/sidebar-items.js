@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["clone_hashes_for_crds"],"struct":["LatestSnapshotHashes","SnapshotGossipManager"],"trait":["AsSnapshotHash"]};

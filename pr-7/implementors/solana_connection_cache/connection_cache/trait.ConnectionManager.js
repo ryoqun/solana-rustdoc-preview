@@ -1,4 +1,0 @@
-(function() {var implementors = {
-"solana_quic_client":[["impl ConnectionManager for <a class=\"struct\" href=\"solana_quic_client/struct.QuicConnectionManager.html\" title=\"struct solana_quic_client::QuicConnectionManager\">QuicConnectionManager</a>"]],
-"solana_udp_client":[["impl ConnectionManager for <a class=\"struct\" href=\"solana_udp_client/struct.UdpConnectionManager.html\" title=\"struct solana_udp_client::UdpConnectionManager\">UdpConnectionManager</a>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

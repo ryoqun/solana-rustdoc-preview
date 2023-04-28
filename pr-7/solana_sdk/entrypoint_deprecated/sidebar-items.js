@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["SUCCESS"],"fn":["deserialize"],"type":["ProcessInstruction","ProgramResult"]};

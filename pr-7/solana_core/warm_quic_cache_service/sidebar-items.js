@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["CACHE_JITTER_SLOT","CACHE_OFFSET_SLOT"],"struct":["WarmQuicCacheService"]};

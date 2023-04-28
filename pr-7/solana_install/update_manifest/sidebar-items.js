@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"struct":["SignedUpdateManifest","UpdateManifest","__FieldVisitor","__Visitor"]};

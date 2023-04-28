@@ -1,5 +1,0 @@
-(function() {var implementors = {
-"solana_client":[["impl <a class=\"trait\" href=\"solana_client/tpu_connection/trait.TpuConnection.html\" title=\"trait solana_client::tpu_connection::TpuConnection\">ClientConnection</a> for <a class=\"enum\" href=\"solana_client/connection_cache/enum.BlockingClientConnection.html\" title=\"enum solana_client::connection_cache::BlockingClientConnection\">BlockingClientConnection</a>"]],
-"solana_quic_client":[["impl ClientConnection for <a class=\"struct\" href=\"solana_quic_client/quic_client/struct.QuicClientConnection.html\" title=\"struct solana_quic_client::quic_client::QuicClientConnection\">QuicClientConnection</a>"]],
-"solana_udp_client":[["impl ClientConnection for <a class=\"struct\" href=\"solana_udp_client/udp_client/struct.UdpClientConnection.html\" title=\"struct solana_udp_client::udp_client::UdpClientConnection\">UdpClientConnection</a>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

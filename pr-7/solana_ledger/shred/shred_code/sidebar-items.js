@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_CODE_SHREDS_PER_SLOT"],"enum":["ShredCode"],"fn":["erasure_mismatch","erasure_shard_index","sanitize"]};

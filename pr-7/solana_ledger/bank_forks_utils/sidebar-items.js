@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["bank_forks_from_snapshot","load","load_bank_forks"],"type":["LoadResult"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["get_account","get_account_with_commitment"],"mod":["blockhash_query","nonblocking"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"fn":["deserialize","serialize"],"struct":["CompactVoteStateUpdate","LockoutOffset","__DeserializeWith","__FieldVisitor","__SerializeWith","__Visitor"]};

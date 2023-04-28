@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MESSAGE_HEADER_LENGTH","MESSAGE_VERSION_PREFIX"],"enum":["AddressLoaderError","CompileError","SanitizeMessageError","SanitizedMessage","SimpleAddressLoader","VersionedMessage"],"mod":["legacy","v0"],"struct":["AccountKeys","LegacyMessage","Message","MessageHeader","SanitizedVersionedMessage"],"trait":["AddressLoader"]};

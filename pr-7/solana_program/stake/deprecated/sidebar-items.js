@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MINIMUM_STAKE_DELEGATION"]};

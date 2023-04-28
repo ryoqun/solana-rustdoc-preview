@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["CACHE_ENTRY_SIZE"],"struct":["ReadOnlyAccountCacheEntry","ReadOnlyAccountsCache"],"type":["ReadOnlyCacheKey"]};

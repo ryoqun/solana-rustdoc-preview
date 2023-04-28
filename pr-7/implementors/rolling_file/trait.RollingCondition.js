@@ -1,3 +1,0 @@
-(function() {var implementors = {
-"solana_core":[["impl RollingCondition for <a class=\"struct\" href=\"solana_core/banking_trace/struct.RollingConditionGrouped.html\" title=\"struct solana_core::banking_trace::RollingConditionGrouped\">RollingConditionGrouped</a>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

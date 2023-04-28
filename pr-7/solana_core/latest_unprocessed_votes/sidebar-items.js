@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["VoteSource"],"fn":["weighted_random_order_by_stake"],"struct":["LatestUnprocessedVotes","LatestValidatorVotePacket","VoteBatchInsertionMetrics"]};

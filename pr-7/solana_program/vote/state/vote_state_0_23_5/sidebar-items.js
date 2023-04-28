@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS","MAX_ITEMS"],"enum":["__Field"],"struct":["CircBuf","VoteState0_23_5","__FieldVisitor","__Visitor"]};

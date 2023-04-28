@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["StorageSelector"],"fn":["get_ancient_append_vec_capacity","is_ancient"],"struct":["AccountsToCombine","AccountsToStore","AncientSlotInfos","PackedAncientStorage","PackedAncientStorageTuning","SlotInfo","WriteAncientAccounts"]};

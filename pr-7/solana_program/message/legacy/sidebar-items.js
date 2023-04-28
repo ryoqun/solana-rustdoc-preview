@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"fn":["__stability","__static_ref_initialize","__wbg_message_new","compile_instruction","compile_instructions","is_builtin_key_or_sysvar","position"],"struct":["BUILTIN_PROGRAMS_KEYS","MAYBE_BUILTIN_KEY_OR_SYSVAR","Message","__DeserializeWith","__FieldVisitor","__SerializeWith","__Visitor"]};

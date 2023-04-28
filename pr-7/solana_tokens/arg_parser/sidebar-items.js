@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["get_matches","parse_args","parse_balances_args","parse_create_stake_args","parse_distribute_spl_tokens_args","parse_distribute_stake_args","parse_distribute_tokens_args","parse_transaction_log_args"]};

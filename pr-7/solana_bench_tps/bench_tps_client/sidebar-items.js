@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["BenchTpsError"],"mod":["bank_client","rpc_client","thin_client","tpu_client"],"trait":["BenchTpsClient"],"type":["Result"]};

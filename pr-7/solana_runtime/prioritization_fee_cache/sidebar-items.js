@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_NUM_RECENT_BLOCKS"],"enum":["CacheServiceUpdate"],"struct":["PrioritizationFeeCache","PrioritizationFeeCacheMetrics"]};

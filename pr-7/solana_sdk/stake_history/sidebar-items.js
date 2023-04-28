@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_ENTRIES"],"struct":["StakeHistory","StakeHistoryEntry"],"type":["Epoch"]};

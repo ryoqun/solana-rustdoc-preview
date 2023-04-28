@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["create_test_accounts","update_accounts_bench"]};

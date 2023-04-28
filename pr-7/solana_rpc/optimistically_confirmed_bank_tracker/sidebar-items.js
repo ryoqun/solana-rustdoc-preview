@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["BankNotification"],"static":["INC_NEW_COUNTER","INIT_HOOK"],"struct":["OptimisticallyConfirmedBank","OptimisticallyConfirmedBankTracker"],"type":["BankNotificationReceiver","BankNotificationSender"]};

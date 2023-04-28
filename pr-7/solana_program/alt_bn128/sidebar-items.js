@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["AltBn128Error"],"mod":["consts","prelude","target_arch"],"struct":["PodG1","PodG2"]};

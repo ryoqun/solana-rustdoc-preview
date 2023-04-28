@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["param"],"mod":["gen_client","internal","rpc_impl_RpcSolPubSub"],"struct":["RpcSolPubSubClient","RpcSolPubSubImpl"],"trait":["RpcSolPubSub","RpcSolPubSubInternal"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["DATA_START","FIELDS","HASHED_PUBKEY_SERIALIZED_SIZE","SIGNATURE_OFFSETS_SERIALIZED_SIZE","SIGNATURE_SERIALIZED_SIZE"],"enum":["__Field"],"fn":["construct_eth_pubkey","get_data_slice","new_secp256k1_instruction","verify"],"struct":["SecpSignatureOffsets","__FieldVisitor","__Visitor"]};

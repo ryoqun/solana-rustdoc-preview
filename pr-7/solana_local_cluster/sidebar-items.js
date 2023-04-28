@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["cluster","cluster_tests","local_cluster","local_cluster_snapshot_utils","validator_configs"]};

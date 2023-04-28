@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["STATS_SUBMIT_CADENCE"],"fn":["should_drop_merkle_shreds"],"struct":["ShredFetchStage"]};

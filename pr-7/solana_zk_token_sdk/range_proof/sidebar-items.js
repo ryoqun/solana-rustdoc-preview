@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["delta"],"mod":["errors","generators","inner_product","util"],"struct":["RangeProof"]};

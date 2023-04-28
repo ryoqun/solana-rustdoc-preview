@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["recv_mmsg","recv_mmsg_exact"]};

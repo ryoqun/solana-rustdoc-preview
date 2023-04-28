@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["CLUSTER_NODES_CACHE_NUM_EPOCH_CAP","CLUSTER_NODES_CACHE_TTL","DEDUPER_FALSE_POSITIVE_RATE","DEDUPER_NUM_BITS","DEDUPER_RESET_CYCLE","MAX_DUPLICATE_COUNT","PAR_ITER_MIN_NUM_SHREDS","SUBMIT_CADENCE"],"fn":["retransmit","retransmit_shred","retransmitter"],"struct":["RetransmitSlotStats","RetransmitStage","RetransmitStats","ShredDeduper"]};

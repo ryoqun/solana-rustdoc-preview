@@ -1,4 +1,0 @@
-(function() {var implementors = {
-"solana_program_runtime":[["impl Sequence for <a class=\"enum\" href=\"solana_program_runtime/timings/enum.ExecuteTimingType.html\" title=\"enum solana_program_runtime::timings::ExecuteTimingType\">ExecuteTimingType</a>"]],
-"solana_storage_bigtable":[["impl Sequence for <a class=\"enum\" href=\"solana_storage_bigtable/compression/enum.CompressionMethod.html\" title=\"enum solana_storage_bigtable::compression::CompressionMethod\">CompressionMethod</a>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["TRANSFER_AMOUNT_HI_BITS","TRANSFER_AMOUNT_LO_BITS","TRANSFER_AMOUNT_LO_NEGATED_BITS","TRANSFER_SOURCE_AMOUNT_BITS"],"fn":["__stability","__static_ref_initialize","as_array","as_arrays"],"struct":["COMMITMENT_MAX","TransferAmountEncryption","TransferData","TransferProof","TransferProofContext","TransferPubkeys"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["banks_server","rpc_banks_service"]};

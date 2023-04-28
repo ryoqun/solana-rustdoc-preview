@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["AccountAddressFilter"],"fn":["prepare_if_nonce_account"],"struct":["AccountLocks","Accounts","LoadedTransaction"],"type":["PubkeyAccountSlot","TransactionLoadResult","TransactionProgramIndices","TransactionRent"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["RETRANSMIT_BACKOFF_CAP","RETRANSMIT_BASE_DELAY_MS"],"struct":["ForkProgress","ForkStats","ProgressMap","PropagatedStats","ReplaySlotStats","RetransmitInfo","ValidatorStakeInfo"],"type":["ExpirationSlot","LockoutIntervals","VotedSlot"]};

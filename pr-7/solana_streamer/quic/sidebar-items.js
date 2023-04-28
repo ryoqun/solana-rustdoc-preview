@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_STAKED_CONNECTIONS","MAX_UNSTAKED_CONNECTIONS"],"enum":["QuicServerError"],"fn":["configure_server","rt","spawn_server"],"struct":["SkipClientVerification","StreamStats"]};

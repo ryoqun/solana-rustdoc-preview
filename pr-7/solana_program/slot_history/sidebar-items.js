@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS","MAX_ENTRIES"],"enum":["Check","__Field"],"struct":["SlotHistory","__FieldVisitor","__Visitor"]};

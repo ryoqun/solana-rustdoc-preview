@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MICRO_LAMPORTS_PER_LAMPORT"],"enum":["PrioritizationFeeType"],"struct":["PrioritizationFeeDetails"],"type":["MicroLamports"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["check_id","id"],"mod":["authorized_voters","vote_error","vote_instruction","vote_processor","vote_state","vote_transaction"]};

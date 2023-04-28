@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["Visit"],"fn":["get_best_repair_shreds"],"struct":["RepairWeightTraversal"]};

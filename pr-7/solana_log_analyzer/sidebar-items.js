@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"fn":["analyze_logs","main","map_ip_address","process_iftop_logs"],"struct":["IpAddrMapping","LogLine","__FieldVisitor","__Visitor"]};

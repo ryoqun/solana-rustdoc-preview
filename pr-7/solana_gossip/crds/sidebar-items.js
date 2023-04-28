@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["CRDS_SHARDS_BITS","VOTE_SLOTS_METRICS_CAP"],"enum":["CrdsError","GossipRoute"],"fn":["overrides"],"struct":["Crds","CrdsDataStats","CrdsStats","Cursor","VersionedCrdsValue"],"type":["CrdsCountsArray"]};

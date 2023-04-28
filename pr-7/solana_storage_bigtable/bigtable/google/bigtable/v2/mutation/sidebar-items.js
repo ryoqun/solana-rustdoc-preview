@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["STRUCT_NAME"],"enum":["Mutation"],"fn":["ScalarWrapper"],"struct":["DeleteFromColumn","DeleteFromFamily","DeleteFromRow","SetCell"]};

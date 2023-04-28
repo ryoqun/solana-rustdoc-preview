@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["CostUpdate"],"struct":["CostUpdateService"],"type":["CostUpdateReceiver"]};

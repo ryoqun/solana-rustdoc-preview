@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["add_genesis_accounts","check_id","get_minimum_delegation","id"],"mod":["config","stake_instruction","stake_state"]};

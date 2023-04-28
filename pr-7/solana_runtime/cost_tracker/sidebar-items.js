@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["WRITABLE_ACCOUNTS_PER_BLOCK"],"enum":["CostTrackerError"],"struct":["CostTracker"]};

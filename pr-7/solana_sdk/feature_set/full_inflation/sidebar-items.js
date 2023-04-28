@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["devnet_and_testnet","mainnet"]};

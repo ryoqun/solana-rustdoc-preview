@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["ID","SPL_TOKEN_ACCOUNT_LENGTH","SPL_TOKEN_ACCOUNT_MINT_OFFSET","SPL_TOKEN_ACCOUNT_OWNER_OFFSET"],"fn":["check_id","id"],"mod":["native_mint","program_v3_4_0"],"struct":["Account"],"trait":["GenericTokenAccount"]};

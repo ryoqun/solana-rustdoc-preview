@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FEE_PAYER_ARG"],"fn":["fee_payer_arg"]};

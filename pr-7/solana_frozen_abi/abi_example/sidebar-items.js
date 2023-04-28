@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["__stability","__static_ref_initialize","normalize_type_name"],"macro":["array_example_impls","atomic_example_impls","example_impls","tuple_example_impls"],"struct":["VEC_U8"],"trait":["AbiEnumVisitor","AbiExample","EvenAsOpaque","IgnoreAsHelper","TypeErasedExample"],"type":["Placeholder"]};

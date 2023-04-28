@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"fn":["create_account","store"],"struct":["DateConfig","__DeserializeWith","__FieldVisitor","__SerializeWith","__Visitor"]};

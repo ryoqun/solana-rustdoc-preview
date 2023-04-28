@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["NONCE_ARG","NONCE_AUTHORITY_ARG"],"fn":["nonce_arg","nonce_authority_arg"],"trait":["NonceArgs"]};

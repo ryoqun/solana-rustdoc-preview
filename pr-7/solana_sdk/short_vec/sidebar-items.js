@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["decode_shortu16_len","deserialize","serialize"],"struct":["ShortU16","ShortVec"]};

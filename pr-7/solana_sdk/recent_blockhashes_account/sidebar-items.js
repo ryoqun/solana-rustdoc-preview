@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["create_account_with_data","create_account_with_data_and_fields","create_account_with_data_for_test","update_account"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["SystemAccountKind"],"fn":["allocate","allocate_and_assign","assign","create_account","get_system_account_kind","process_instruction","transfer","transfer_verified","transfer_with_seed"],"struct":["Address"]};

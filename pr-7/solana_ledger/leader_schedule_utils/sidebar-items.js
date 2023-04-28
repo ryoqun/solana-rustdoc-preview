@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["first_of_consecutive_leader_slots","leader_schedule","leader_schedule_by_identity","num_ticks_left_in_slot","slot_leader_at","sort_stakes"],"type":["LeaderScheduleByIdentity"]};

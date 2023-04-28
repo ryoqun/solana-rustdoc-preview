@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["kill_process","stop_process"]};

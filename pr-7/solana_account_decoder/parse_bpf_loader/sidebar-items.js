@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS","VARIANTS"],"enum":["BpfUpgradeableLoaderAccountType","__Field"],"fn":["parse_bpf_upgradeable_loader"],"struct":["UiBuffer","UiProgram","UiProgramData","__FieldVisitor","__Seed","__Visitor"]};

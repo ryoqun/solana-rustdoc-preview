@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["INITIAL_LOCKOUT","MAX_EPOCH_CREDITS_HISTORY","MAX_LOCKOUT_HISTORY"],"enum":["VoteAuthorize","VoteStateVersions"],"mod":["serde_compact_vote_state_update","vote_state_versions"],"struct":["BlockTimestamp","CircBuf","Lockout","Vote","VoteAuthorizeCheckedWithSeedArgs","VoteAuthorizeWithSeedArgs","VoteInit","VoteState","VoteStateUpdate"]};

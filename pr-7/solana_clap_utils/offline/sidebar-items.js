@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["BLOCKHASH_ARG","DUMP_TRANSACTION_MESSAGE","SIGNER_ARG","SIGN_ONLY_ARG"],"fn":["blockhash_arg","dump_transaction_message","sign_only_arg","signer_arg"],"struct":["NullArgsConfig"],"trait":["ArgsConfig","OfflineArgs"]};

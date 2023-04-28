@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["bucket","bucket_api","bucket_item","bucket_map","bucket_stats","bucket_storage","index_entry"],"type":["MaxSearch","RefCount"]};

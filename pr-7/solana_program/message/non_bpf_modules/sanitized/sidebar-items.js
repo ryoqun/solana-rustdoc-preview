@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["SanitizeMessageError","SanitizedMessage"],"struct":["LegacyMessage"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["STRUCT_NAME"],"enum":["Filter"],"fn":["ScalarWrapper"],"struct":["Chain","Condition","Interleave"]};

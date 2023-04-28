@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["AGE_MS","DEFAULT_AGE_TO_STAY_IN_CACHE","DEFAULT_DISK_INDEX"],"struct":["BucketMapHolder"],"type":["Age"]};

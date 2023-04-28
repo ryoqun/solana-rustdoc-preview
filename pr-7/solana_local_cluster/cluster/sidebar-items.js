@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["ClusterValidatorInfo","ValidatorInfo"],"trait":["Cluster"]};

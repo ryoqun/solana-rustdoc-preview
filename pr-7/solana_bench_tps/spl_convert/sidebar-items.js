@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"macro":["impl_account_meta_conversion","impl_instruction_conversion","impl_pubkey_conversion"],"trait":["FromOtherSolana"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["NUM_BLOCKS_TO_DELETE_IN_PARALLEL"],"fn":["delete_confirmed_blocks"]};

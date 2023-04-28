@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["serialize_account"],"struct":["Account","__SerializeWith"]};

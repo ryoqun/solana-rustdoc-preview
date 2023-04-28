@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["ProcessingDecision"],"struct":["MultiIteratorScanner","PayloadAndAlreadyHandled"]};

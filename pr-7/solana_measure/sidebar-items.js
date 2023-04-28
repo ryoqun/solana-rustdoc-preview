@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"macro":["measure","measure_us"],"mod":["macros","measure"]};

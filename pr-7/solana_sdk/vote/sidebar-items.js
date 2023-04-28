@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["authorized_voters","error","instruction","program","state"]};

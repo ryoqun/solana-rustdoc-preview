@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_ROOT_PRINT_SECONDS"],"enum":["UpdateLabel","UpdateOperation"],"struct":["AncestorIterator","ForkInfo","HeaviestSubtreeForkChoice"],"trait":["GetSlotHash"],"type":["ForkWeight","SlotHashKey","UpdateOperations"]};

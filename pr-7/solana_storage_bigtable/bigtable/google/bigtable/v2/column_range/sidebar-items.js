@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["EndQualifier","StartQualifier"],"fn":["ScalarWrapper"]};

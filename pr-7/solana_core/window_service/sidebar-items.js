@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_NUM_ADDRS"],"fn":["prune_shreds_invalid_repair","run_check_duplicate","run_insert","verify_repair"],"static":["INC_NEW_COUNTER","INIT_HOOK"],"struct":["RepairMeta","WindowService","WindowServiceMetrics"],"type":["DuplicateSlotReceiver","DuplicateSlotSender","ShredPayload"]};

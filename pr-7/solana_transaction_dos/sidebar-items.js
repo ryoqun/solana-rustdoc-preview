@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["airdrop_lamports","main","make_create_message","make_dos_message","run_transactions_dos"]};

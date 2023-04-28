@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["goto_end_of_slot","update_vote_account_timestamp"]};

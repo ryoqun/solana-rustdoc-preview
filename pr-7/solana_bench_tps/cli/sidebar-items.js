@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["NUM_LAMPORTS_PER_ACCOUNT_DEFAULT"],"enum":["ExternalClientType"],"fn":["build_args","parse_args"],"struct":["Config","InstructionPaddingConfig"]};

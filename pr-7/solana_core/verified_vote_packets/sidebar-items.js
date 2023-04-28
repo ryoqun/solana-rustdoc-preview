@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_VOTES_PER_VALIDATOR","RECV_TIMEOUT"],"enum":["SingleValidatorVotes"],"struct":["GossipVote","ValidatorGossipVotesIterator","VerifiedVoteMetadata","VerifiedVotePackets"]};

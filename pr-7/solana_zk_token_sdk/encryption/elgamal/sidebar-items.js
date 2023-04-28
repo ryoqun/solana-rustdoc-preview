@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"struct":["DecryptHandle","ElGamal","ElGamalCiphertext","ElGamalKeypair","ElGamalPubkey","ElGamalSecretKey","__FieldVisitor","__Visitor"]};
