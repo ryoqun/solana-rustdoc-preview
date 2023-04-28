@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEFAULT_LEADER_SCHEDULE_SLOT_OFFSET","FIELDS","MAX_LEADER_SCHEDULE_EPOCH_OFFSET","MINIMUM_SLOTS_PER_EPOCH"],"enum":["__Field"],"struct":["EpochSchedule","__FieldVisitor","__Visitor"]};

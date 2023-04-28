@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","MAX_ENTRIES"],"enum":["__Field"],"struct":["StakeHistory","StakeHistoryEntry","__FieldVisitor","__Visitor"]};

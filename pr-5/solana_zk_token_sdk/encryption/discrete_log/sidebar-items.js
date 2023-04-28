@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","TWO16","TWO17"],"enum":["__Field"],"fn":["__stability","__static_ref_initialize","decode_u32_precomputation"],"struct":["DECODE_PRECOMPUTATION_FOR_G","DecodePrecomputation","DiscreteLog","RistrettoIterator","__FieldVisitor","__Visitor"]};

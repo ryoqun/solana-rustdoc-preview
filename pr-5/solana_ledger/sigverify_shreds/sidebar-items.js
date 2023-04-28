@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["SIGN_SHRED_GPU_MIN","SIZE_OF_MERKLE_ROOT"],"fn":["elems_from_buffer","get_merkle_roots","resize_buffer","shred_gpu_offsets","sign_shred_cpu","sign_shreds_cpu","sign_shreds_gpu","sign_shreds_gpu_pinned_keypair","slot_key_data_for_gpu","verify_shred_cpu","verify_shreds_cpu","verify_shreds_gpu"]};

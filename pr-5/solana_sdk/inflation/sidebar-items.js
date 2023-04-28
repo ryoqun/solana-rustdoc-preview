@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEFAULT_FOUNDATION","DEFAULT_FOUNDATION_TERM","DEFAULT_INITIAL","DEFAULT_TAPER","DEFAULT_TERMINAL","FIELDS"],"enum":["__Field"],"struct":["Inflation","__FieldVisitor","__Visitor"]};

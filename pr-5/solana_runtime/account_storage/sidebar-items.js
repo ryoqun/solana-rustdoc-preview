@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["VARIANTS"],"enum":["AccountStorageStatus","__Field"],"mod":["meta"],"struct":["AccountStorage","AccountStorageIter","AccountStorageReference","ShrinkInProgress","__FieldVisitor","__Visitor"],"type":["AccountStorageMap"]};

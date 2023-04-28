@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["builtin_feature_transitions","genesis_builtins","get"],"macro":["to_builtin"]};

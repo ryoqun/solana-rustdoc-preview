@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","LEGACY_FMT_LOAD_ERR","VARIANTS"],"enum":["ExplicitRelease","__Field"],"struct":["Config","__FieldVisitor","__Visitor"]};

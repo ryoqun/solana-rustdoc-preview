@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"derive":["Pod","Zeroable"],"mod":["target_arch"],"struct":["PodScalar"],"trait":["Pod","Zeroable"]};

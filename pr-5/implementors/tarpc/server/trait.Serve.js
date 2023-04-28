@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"solana_banks_interface":[["impl&lt;S&gt; Serve&lt;<a class=\"enum\" href=\"solana_banks_interface/enum.BanksRequest.html\" title=\"enum solana_banks_interface::BanksRequest\">BanksRequest</a>&gt; for <a class=\"struct\" href=\"solana_banks_interface/struct.ServeBanks.html\" title=\"struct solana_banks_interface::ServeBanks\">ServeBanks</a>&lt;S&gt;<span class=\"where fmt-newline\">where\n    S: <a class=\"trait\" href=\"solana_banks_interface/trait.Banks.html\" title=\"trait solana_banks_interface::Banks\">Banks</a>,</span>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

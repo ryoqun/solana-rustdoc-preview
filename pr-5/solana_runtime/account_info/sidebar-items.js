@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["CACHED_OFFSET","CACHE_VIRTUAL_STORAGE_ID"],"enum":["StorageLocation"],"struct":["AccountInfo","AccountOffsetAndFlags","PackedOffsetAndFlags"],"type":["Offset","OffsetReduced","StoredSize"]};

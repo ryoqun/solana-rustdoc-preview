@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["VoteOp"],"static":["INC_NEW_COUNTER","INIT_HOOK"],"struct":["VotingService"]};

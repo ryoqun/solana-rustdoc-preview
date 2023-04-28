@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["GetConfirmedSignaturesForAddress2Config","RpcClient","RpcClientConfig"],"trait":["SerializableMessage","SerializableTransaction"]};

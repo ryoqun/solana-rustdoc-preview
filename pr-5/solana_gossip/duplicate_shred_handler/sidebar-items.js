@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["BUFFER_CAPACITY","MAX_NUM_CHUNKS","MAX_NUM_ENTRIES_PER_PUBKEY"],"fn":["should_consume_slot"],"struct":["DuplicateShredHandler"],"type":["BufferEntry"]};
