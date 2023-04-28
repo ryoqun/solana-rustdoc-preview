@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"solana_logger":[["impl <a class=\"trait\" href=\"https://docs.rs/log/0.4.17/log/trait.Log.html\" title=\"trait log::Log\">Log</a> for <a class=\"struct\" href=\"solana_logger/struct.LoggerShim.html\" title=\"struct solana_logger::LoggerShim\">LoggerShim</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","VARIANTS"],"enum":["VoteAccountType","__Field"],"fn":["parse_vote"],"struct":["UiAuthorizedVoters","UiEpochCredits","UiLockout","UiPriorVoters","UiVoteState","__FieldVisitor","__Seed","__Visitor"]};

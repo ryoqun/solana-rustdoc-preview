@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MAX_OUTSTANDING_TASK","SEND_DATA_TIMEOUT"],"fn":["__stability","__static_ref_initialize","handle_send_result","send_data_async","send_data_batch_async"],"struct":["ASYNC_TASK_SEMAPHORE","AsyncTaskSemaphore","QuicClientConnection","RUNTIME"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CacheHashData","CacheHashDataFile","Header"],"type":["EntryType","PreExistingCacheFiles","SavedType","SavedTypeSlice"]};

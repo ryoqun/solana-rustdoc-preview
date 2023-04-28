@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MAP_SIZE_REPORTING_THRESHOLD","MAX_REPORT_ENTRIES","SUBMIT_CADENCE"],"enum":["StreamerError"],"fn":["receiver","recv_loop","recv_packet_batches","recv_send","responder"],"struct":["SendStats","StakedNodes","StreamerReceiveStats","StreamerSendStats"],"type":["PacketBatchReceiver","PacketBatchSender","Result"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["upload_confirmed_blocks"],"struct":["BlockstoreLoadStats","ConfirmedBlockUploadConfig"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["deserialize","serialize"],"macro":["impl_var_int"],"struct":["VarIntVisitor"],"trait":["VarInt"]};

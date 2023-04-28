@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS"],"enum":["__Field"],"struct":["LegacyVersion1","LegacyVersion2","__FieldVisitor","__Visitor"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["RewardsMessage"],"struct":["RewardsRecorderService"],"type":["RewardsBatch","RewardsRecorderReceiver","RewardsRecorderSender"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["GeyserPluginManagerError","GeyserPluginManagerRequest"],"fn":["load_plugin_from_config"],"struct":["GeyserPluginManager"]};

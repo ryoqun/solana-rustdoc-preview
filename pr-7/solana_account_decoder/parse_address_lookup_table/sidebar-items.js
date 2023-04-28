@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIELDS","VARIANTS"],"enum":["LookupTableAccountType","__Field"],"fn":["parse_address_lookup_table"],"struct":["UiLookupTable","__FieldVisitor","__Seed","__Visitor"]};

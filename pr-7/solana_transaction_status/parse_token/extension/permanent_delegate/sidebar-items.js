@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["parse_initialize_permanent_delegate_instruction"]};

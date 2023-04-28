@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["initialize_state"],"struct":["VoteSimulator"]};

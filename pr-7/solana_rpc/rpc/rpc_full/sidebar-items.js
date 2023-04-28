@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["gen_client","rpc_impl_Full"],"static":["INC_NEW_COUNTER","INIT_HOOK"],"struct":["FullClient","FullImpl"],"trait":["Full"]};

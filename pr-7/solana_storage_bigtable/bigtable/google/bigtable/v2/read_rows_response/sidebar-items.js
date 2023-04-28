@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["STRUCT_NAME"],"fn":["Inner","ScalarWrapper"],"mod":["cell_chunk"],"struct":["CellChunk","ScalarWrapper"]};

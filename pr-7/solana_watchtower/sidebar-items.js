@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["get_cluster_info","get_config","main"],"struct":["Config"]};

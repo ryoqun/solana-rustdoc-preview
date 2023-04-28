@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["CACHED_KEY_SIZE","MAX_CACHE_ENTRIES"],"fn":["as_array"],"struct":["StatusCache"],"type":["ForkStatus","KeyMap","KeySlice","KeyStatusMap","SlotDelta","SlotDeltaMap","Status"]};

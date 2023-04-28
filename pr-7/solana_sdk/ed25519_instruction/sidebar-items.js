@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DATA_START","PUBKEY_SERIALIZED_SIZE","SIGNATURE_OFFSETS_SERIALIZED_SIZE","SIGNATURE_OFFSETS_START","SIGNATURE_SERIALIZED_SIZE"],"fn":["get_data_slice","new_ed25519_instruction","verify"],"struct":["Ed25519SignatureOffsets"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["parse_transfer_fee_instruction"]};
